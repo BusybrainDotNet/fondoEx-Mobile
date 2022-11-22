@@ -6,6 +6,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 
 
+
+
+
+/*
+* Splash Screen Or Home Page For Users
+*/
 function Home({navigation}) {
 
     const loginHandler = () => {
@@ -22,8 +28,8 @@ function Home({navigation}) {
                     <View style={styles.imageContainer}>
                         <Image source={require('./assets/images/logo.png')} title="Splash Image" style={styles.image}/>
 
-                        <Pressable onPress={registerHandler} style={({pressed}) => ({backgroundColor: pressed ? '#ddd' : '#595959', margin: 15, padding: 15, borderRadius: 20}) }>
-                            <Text style={styles.btnText}>Let's Get You Started</Text>
+                        <Pressable onPress={registerHandler} style={({pressed}) => ({backgroundColor: pressed ? '#ddd' : '#595959', margin: 35, padding: 15, borderRadius: 20}) }>
+                            <Text style={styles.btnText}>LET'S GET YOU STARTED</Text>
                         </Pressable>
                         <Pressable onPress={loginHandler} style={styles.link}>
                             <Text style={styles.btnText}>Already A member? Login</Text>
@@ -36,14 +42,26 @@ function Home({navigation}) {
 
 
 
+
+
+
+
+/*
+* Login Page For Members
+*/
 function Login({navigation}){
 
+/*
+* Define Route Handlers
+*/
     const loginHandler = () => {
         navigation.navigate('Home');
     }
     const registerHandler = () => {
         navigation.navigate('Register');
     }
+
+
     return (
         <SafeAreaView style={styles.appContainer}>
         <ScrollView>
@@ -56,7 +74,7 @@ function Login({navigation}){
                 <Text style={styles.label}>Password</Text>
                 <TextInput style={styles.textInput} placeholder="**********" />
 
-                <Pressable onPress={loginHandler} style={({pressed}) => ({backgroundColor: pressed ? '#ddd' : '#595959', margin: 15, padding: 15, borderRadius: 20}) }>
+                <Pressable onPress={loginHandler} style={({pressed}) => ({backgroundColor: pressed ? '#ddd' : '#595959', margin: 15, padding: 15, borderRadius: 20, textAlign: 'center',}) }>
                     <Text style={styles.btnText}>Continue</Text>
                 </Pressable>
                 <Pressable onPress={registerHandler} style={styles.link}>
@@ -71,20 +89,47 @@ function Login({navigation}){
 
 
 
-function Register(){
+
+
+
+/*
+* Registration Page For Users
+*/
+function Register({navigation}){
+/*
+* Define Route Handlers
+*/
+    const loginHandler = () => {
+        navigation.navigate('Login');
+    }
+    const registerHandler = () => {
+        navigation.navigate('Register');
+    }
+
     return (
         <SafeAreaView style={styles.appContainer}>
         <ScrollView>
             <View>
-                <Text style={styles.text}>Welcome Back</Text>
-                <Text style={styles.smallText}>Fill The Form Fields To Login</Text>
+                <Text style={styles.text}>Member Registration</Text>
+                <Text style={styles.smallText}>Fill The Form Fields Below To Become A Member</Text>
 
+                <Text style={styles.label}>First Name</Text>
+                <TextInput style={styles.textInput} placeholder="Johnson" />
+                <Text style={styles.label}>Last Name</Text>
+                <TextInput style={styles.textInput} placeholder="Darey" />
                 <Text style={styles.label}>Email ID</Text>
                 <TextInput style={styles.textInput} placeholder="Dareyjohn@member.com" />
                 <Text style={styles.label}>Password</Text>
                 <TextInput style={styles.textInput} placeholder="**********" />
 
-                <Text style={styles.link}>Already a Member? Login</Text>
+                <Pressable onPress={registerHandler} style={({pressed}) => ({backgroundColor: pressed ? '#ddd' : '#595959', margin: 15, padding: 15, borderRadius: 20, textAlign: 'center',}) }>
+                    <Text style={styles.btnText}>Continue</Text>
+                </Pressable>
+
+                <Pressable onPress={loginHandler} style={styles.link}>
+                    <Text style={styles.btnText}>Already A member? Login</Text>
+                </Pressable>
+
                 <Text style={styles.smallText}>Your Number One Utility Payment Platform In Africa! </Text>
         </View>
         </ScrollView>
@@ -95,6 +140,13 @@ function Register(){
 
 
 
+
+
+
+
+/*
+* Main App For Users Screen
+*/
 const App = () => {
     return (
     <>
@@ -110,7 +162,14 @@ const App = () => {
 }
 
 
-//CSS Styling Of The App
+
+
+
+
+
+/*
+* CSS Styling Of The App
+*/
 const styles = StyleSheet.create({
     appContainer: {
         flex: 1,
@@ -123,14 +182,23 @@ const styles = StyleSheet.create({
         margin: 0,
     },
     text: {
+            color: '#fff',
+            fontSize: 20,
+            padding: 10,
+            textAlign: 'center'
+        },
+    textInput: {
         color: '#fff',
         fontSize: 20,
         padding: 10,
-        textAlign: 'center'
+        textAlign: 'center',
+        borderRadius: 10,
+        borderColor: '#fff',
+
     },
     smallText: {
         color: '#fff',
-        fontSize: 20,
+        fontSize: 14,
         margin: 40,
         textAlign: 'center'
     },
@@ -169,7 +237,8 @@ const styles = StyleSheet.create({
         fontWeight: 600,
         justifyContent: 'center',
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        textAlign: 'center',
     },
     btnText : {
         color: '#fff',
@@ -179,5 +248,7 @@ const styles = StyleSheet.create({
 
 
 
-
+/*
+* Export Of The Main App To Screens
+*/
 export default App;
