@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {SafeAreaView, ScrollView, View, Text, StyleSheet, TextInput, Pressable, TouchableOpacity, Image} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Header from './components/Header';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -28,11 +30,11 @@ function Home({navigation}) {
                     <View style={styles.imageContainer}>
                         <Image source={require('./assets/images/logo.png')} title="Splash Image" style={styles.image}/>
 
-                        <Pressable onPress={registerHandler} style={({pressed}) => ({backgroundColor: pressed ? '#ddd' : '#595959', margin: 35, padding: 15, borderRadius: 20}) }>
-                            <Text style={styles.btnText}>LET'S GET YOU STARTED</Text>
+                        <Pressable onPress={registerHandler} style={({pressed}) => ({backgroundColor: pressed ? '#2c3691' : '#1a84bc', margin: 35, padding: 15, borderRadius: 5}) }>
+                            <Text style={{color: '#fff'}}>LET'S GET YOU STARTED</Text>
                         </Pressable>
                         <Pressable onPress={loginHandler} style={styles.link}>
-                            <Text style={styles.btnText}>Already A member? Login</Text>
+                            <Text style={styles.btnText}>Already A Member? Login</Text>
                         </Pressable>
                     </View>
                 </ScrollView>
@@ -57,6 +59,9 @@ function Login({navigation}){
     const loginHandler = () => {
         navigation.navigate('Home');
     }
+    const forgotHandler = () => {
+        navigation.navigate('Forgot');
+    }
     const registerHandler = () => {
         navigation.navigate('Register');
     }
@@ -64,21 +69,26 @@ function Login({navigation}){
 
     return (
         <SafeAreaView style={styles.appContainer}>
+        <Header />
         <ScrollView>
             <View>
                 <Text style={styles.text}>Welcome Back</Text>
-                <Text style={styles.smallText}>Fill The Form Fields To Login</Text>
 
                 <Text style={styles.label}>Email ID</Text>
                 <TextInput style={styles.textInput} placeholder="Dareyjohn@member.com" />
                 <Text style={styles.label}>Password</Text>
                 <TextInput style={styles.textInput} placeholder="**********" />
 
-                <Pressable onPress={loginHandler} style={({pressed}) => ({backgroundColor: pressed ? '#ddd' : '#595959', margin: 15, padding: 15, borderRadius: 20, textAlign: 'center',}) }>
-                    <Text style={styles.btnText}>Continue</Text>
+
+                <Pressable onPress={forgotHandler} style={styles.link}>
+                    <Text style={{color: '#1a84bc', textAlign: 'right'}}>Forgot Password?</Text>
+                </Pressable>
+
+                <Pressable onPress={loginHandler} style={({pressed}) => ({backgroundColor: pressed ? '#2c3691' : '#1a84bc', marginTop: 5, padding: 15, borderRadius: 5, textAlign: 'center',}) }>
+                    <Text style={{color: '#fff', textAlign: 'center'}}>CONTINUE</Text>
                 </Pressable>
                 <Pressable onPress={registerHandler} style={styles.link}>
-                    <Text style={styles.btnText}>Not Yet A member? Register</Text>
+                    <Text style={{color: '#1a84bc', textAlign: 'center', marginTop: 20}}>Not Yet A member? Register</Text>
                 </Pressable>
                 <Text style={styles.smallText}>Your Number One Utility Payment Platform In Africa! </Text>
         </View>
@@ -86,6 +96,55 @@ function Login({navigation}){
     </SafeAreaView>
     );
 }
+
+
+
+
+
+
+
+
+
+/*
+* Forgot Password Page For Members
+*/
+function Forgot({navigation}){
+
+/*
+* Define Route Handlers
+*/
+    const loginHandler = () => {
+        navigation.navigate('Forgot');
+    }
+    const registerHandler = () => {
+        navigation.navigate('Register');
+    }
+
+
+    return (
+        <SafeAreaView style={styles.appContainer}>
+        <Header />
+        <ScrollView>
+            <View>
+                <Text style={styles.text}>Reset Password</Text>
+
+                <Text style={styles.label}>Email ID</Text>
+                <TextInput style={styles.textInput} placeholder="Dareyjohn@member.com" />
+
+                <Pressable onPress={loginHandler} style={({pressed}) => ({backgroundColor: pressed ? '#2c3691' : '#1a84bc', marginTop: 40, padding: 15, borderRadius: 5, textAlign: 'center',}) }>
+                    <Text style={{color: '#fff', textAlign: 'center'}}>CONTINUE</Text>
+                </Pressable>
+                <Pressable onPress={registerHandler} style={styles.link}>
+                    <Text style={{color: '#1a84bc', textAlign: 'center', marginTop: 20}}>Not Yet A member? Register</Text>
+                </Pressable>
+                <Text style={styles.smallText}>Your Number One Utility Payment Platform In Africa! </Text>
+        </View>
+        </ScrollView>
+    </SafeAreaView>
+    );
+}
+
+
 
 
 
@@ -108,9 +167,9 @@ function Register({navigation}){
 
     return (
         <SafeAreaView style={styles.appContainer}>
+        <Header />
         <ScrollView>
             <View>
-                <Text style={styles.text}>Member Registration</Text>
                 <Text style={styles.smallText}>Fill The Form Fields Below To Become A Member</Text>
 
                 <Text style={styles.label}>First Name</Text>
@@ -122,12 +181,11 @@ function Register({navigation}){
                 <Text style={styles.label}>Password</Text>
                 <TextInput style={styles.textInput} placeholder="**********" />
 
-                <Pressable onPress={registerHandler} style={({pressed}) => ({backgroundColor: pressed ? '#ddd' : '#595959', margin: 15, padding: 15, borderRadius: 20, textAlign: 'center',}) }>
-                    <Text style={styles.btnText}>Continue</Text>
+                <Pressable onPress={loginHandler} style={({pressed}) => ({backgroundColor: pressed ? '#2c3691' : '#1a84bc', marginTop: 40, padding: 15, borderRadius: 5, textAlign: 'center',}) }>
+                    <Text style={{color: '#fff', textAlign: 'center'}}>CONTINUE</Text>
                 </Pressable>
-
                 <Pressable onPress={loginHandler} style={styles.link}>
-                    <Text style={styles.btnText}>Already A member? Login</Text>
+                    <Text style={{color: '#1a84bc', textAlign: 'center', marginTop: 20}}>Already A member? Login</Text>
                 </Pressable>
 
                 <Text style={styles.smallText}>Your Number One Utility Payment Platform In Africa! </Text>
@@ -154,6 +212,7 @@ const App = () => {
             <Stack.Navigator screenOptions={{header: () => null}}>
               <Stack.Screen name="Home" component={Home} />
               <Stack.Screen name="Login" component={Login} />
+              <Stack.Screen name="Forgot" component={Forgot} />
               <Stack.Screen name="Register" component={Register} />
             </Stack.Navigator>
     </NavigationContainer>
@@ -173,33 +232,41 @@ const App = () => {
 const styles = StyleSheet.create({
     appContainer: {
         flex: 1,
-        backgroundColor: '#000'
+        backgroundColor: '#000',
+        padding: 20
     },
     imageContainer: {
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 0,
+        paddingTop: 20,
         margin: 0,
     },
     text: {
             color: '#fff',
             fontSize: 20,
-            padding: 10,
+            paddingTop: 10,
             textAlign: 'center'
         },
+    label: {
+        color: '#595959',
+        fontSize: 12,
+        marginTop: 25,
+        fontFamily: 'Quicksand'
+    },
     textInput: {
-        color: '#fff',
-        fontSize: 20,
+        color: '#595959',
+        fontSize: 14,
         padding: 10,
-        textAlign: 'center',
-        borderRadius: 10,
+        marginTop: 10,
+        borderRadius: 5,
         borderColor: '#fff',
+        backgroundColor: '#fff',
 
     },
     smallText: {
         color: '#fff',
         fontSize: 14,
-        margin: 40,
+        marginTop: 20,
         textAlign: 'center'
     },
     fixToText: {
@@ -229,7 +296,7 @@ const styles = StyleSheet.create({
     btn : {
         width: '60%',
         textColor: '#fff',
-        backgroundColor: '#595959',
+        backgroundColor: '#1a84bc',
         borderRadius: 10,
         padding: 20,
         margin: 30,
@@ -241,7 +308,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     btnText : {
-        color: '#fff',
+        color: '#1a84bc',
         fontFamily: 'Quicksand'
     }
 });
