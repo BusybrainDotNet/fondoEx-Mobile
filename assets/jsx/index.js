@@ -51,8 +51,9 @@ const styles = StyleSheet.create({
         fontSize: 14,
         padding: 10,
         marginTop: 5,
+        borderWidth: 2,
         borderRadius: 5,
-        borderColor: '#fff',
+        borderColor: '#1a84bc',
         backgroundColor: '#fff',
 
     },
@@ -104,12 +105,11 @@ const styles = StyleSheet.create({
     },
 
     iconImage: {
-        flex: 3,
         flexDirection: 'column',
         borderRadius: 100 / 2,
-        padding: 10,
+        padding: 15,
         width: 20,
-        height: 10,
+        height: 15,
         backgroundColor: '#fff',
         margin: 2,
     },
@@ -168,6 +168,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#1a84bc',
         fontFamily: 'Quicksand',
         alignItems: 'center',
+        flexDirection: 'row',
     },
 
     warning_body: {

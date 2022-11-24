@@ -20,11 +20,11 @@ function Home({ navigation }) {
     return (
         <SafeAreaView style={styles.appContainer}>
             <ScrollView>
-                <Pressable onPress={infoHandler}>
-                    <Image style={styles.iconImage} source={require('./assets/images/icons/about.png')}></Image>
-                </Pressable>
-
                 <Text style={styles.text}>Your Number One Utility Payment Platform In Africa! </Text>
+
+                <Pressable onPress={infoHandler}>
+                        <Image style={styles.iconImage} source={require('./assets/images/icons/about.png')}></Image>
+                    </Pressable>
 
                 <View style={styles.imageContainer}>
                     <Image source={require('./assets/images/logo.png')} title="Splash Image" style={styles.image} />

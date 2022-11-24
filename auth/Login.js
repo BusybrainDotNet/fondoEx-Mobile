@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, View, Text, TextInput, Pressable, TouchableOpacity, Modal, } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, TextInput, Pressable, Image, TouchableOpacity, Modal, } from 'react-native';
 import Header from '../components/Header';
 import styles from '../assets/jsx/index';
 
@@ -54,9 +54,10 @@ Handle FOrm Submittion
             >
                 <View style={styles.centered_view}>
                     <View style={styles.warning_modal}>
-                    <View style={styles.warning_header}>
+                        <View style={styles.warning_header}>
+                            <Image source={require('../assets/images/icons/Alert.png')} resizeMode='stretch' title="Alert" style={styles.iconImage} />
                             <Text style={styles.bigText}>Notification Alert!</Text>
-                    </View>
+                        </View>
                     <View style={styles.warning_body}>
                             <Text style={styles.dangerText }>Insufficient Details In One Or More Form Fields!</Text>
                     </View>
