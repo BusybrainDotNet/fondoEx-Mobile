@@ -7,7 +7,11 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     appContainer: {
         flex: 1,
-        backgroundColor: '#000',
+        backgroundColor: '#fff',
+        fontFamily: 'open sans',
+    },
+    backgroundImageContainer: {
+        flex: 1,
         padding: 5
     },
     imageContainer: {
@@ -26,7 +30,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#1a84bc',
         borderRadius: 10,
-        backgroundColor: '#595959',
+        backgroundColor: '#000',
         shadowColor: '#fff',
         borderTopEndRadius: 50,
         borderTopStartRadius: 10,
@@ -37,22 +41,22 @@ const styles = StyleSheet.create({
     text: {
         color: '#fff',
         fontSize: 20,
-        paddingTop: 25,
+        padding: 20,
         textAlign: 'center'
     },
     label: {
         color: '#fff',
         fontSize: 12,
         marginTop: 20,
-        fontFamily: 'Quicksand'
+        fontFamily: 'open sans'
     },
     textInput: {
         color: '#595959',
-        fontSize: 14,
-        padding: 10,
+        fontSize: 16,
+        padding: 5,
         marginTop: 5,
         borderWidth: 2,
-        borderRadius: 5,
+        borderRadius: 10,
         borderColor: '#1a84bc',
         backgroundColor: '#fff',
 
@@ -73,6 +77,18 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 18,
         textAlign: 'center'
+    },
+    smallBlackText: {
+        color: '#000',
+        fontSize: 14,
+        margin: 10,
+        textAlign: 'left'
+    },
+    bigBlackText: {
+        color: '#000',
+        fontSize: 18,
+        margin: 10,
+        textAlign: 'left'
     },
     footText: {
         color: '#fff',
@@ -114,6 +130,11 @@ const styles = StyleSheet.create({
         margin: 2,
     },
 
+    boxImage: {
+        width: 20,
+        height: 15,
+    },
+
     link: {
         color: '#fff',
         fontSize: 14,
@@ -123,7 +144,15 @@ const styles = StyleSheet.create({
     buttonContainer: {
         color: '#595959',
         margin: 20,
-        fontFamily: 'Quicksand'
+    },
+    smallBtn: {
+        textColor: '#fff',
+        backgroundColor: '#fff',
+        borderRadius: 5,
+        padding: 2,
+        margin: 10,
+        fontWeight: 600,
+        width: 80,
     },
     btn: {
         width: '60%',
@@ -132,7 +161,6 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 10,
         margin: 20,
-        fontFamily: 'Quicksand',
         fontWeight: 600,
         justifyContent: 'center',
         flexDirection: 'row',
@@ -141,7 +169,6 @@ const styles = StyleSheet.create({
     },
     btnText: {
         color: '#1a84bc',
-        fontFamily: 'Quicksand'
     },
 
     centered_view: {
@@ -157,7 +184,6 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         color: '#1a84bc',
         backgroundColor: '#1a84bc',
-        fontFamily: 'Quicksand',
     },
 
     warning_header: {
@@ -166,7 +192,6 @@ const styles = StyleSheet.create({
         borderTopEndRadius: 10,
         borderTopStartRadius: 10,
         backgroundColor: '#1a84bc',
-        fontFamily: 'Quicksand',
         alignItems: 'center',
         flexDirection: 'row',
     },
@@ -174,7 +199,7 @@ const styles = StyleSheet.create({
     warning_body: {
         padding: 15,
         backgroundColor: '#fff',
-        fontFamily: 'Quicksand',
+        fontFamily: 'open sans',
         alignItems: 'center',
     },
 
@@ -186,8 +211,79 @@ const styles = StyleSheet.create({
         borderBottomEndRadius: 10,
         borderBottomStartRadius: 10,
         backgroundColor: '#fff',
-        fontFamily: 'Quicksand',
+        fontFamily: 'open sans',
         alignItems: 'center',
+    },
+
+   favBox: {
+       flexDirection: 'row',
+       justifyContent: 'center',
+       alignContent: 'center',
+       padding: 2,
+    },
+
+    serviceBox: {
+        width: 100,
+        borderWidth: 1,
+        backgroundColor: '#D9E4EC',
+        borderColor: '#1a84bc',
+        borderRadius: 5,
+        color: '#385E72', 
+        margin: 3,
+        justifyContent: 'center',
+        alignContent: 'center',
+    },
+    textBox: {
+        color: '#000',
+        fontSize: 10,
+        justifyContent: 'center',
+        alignContent: 'center',
+    },
+
+
+    header: {
+        height: 70,
+        padding: 15,
+        margin: 0,
+        flexDirection: 'row',
+        marginBottom: 10,
+        opacity: 9,
+    },
+    fixToText: {
+        flexDirection: 'row',
+        justifyContent: 'flex-end'
+    },
+
+    textWallet: {
+        color: 'white',
+        fontSize: 14,
+        paddingRight: 1,
+        paddingTop: 10,
+    },
+    textAmount: {
+        color: 'white',
+        fontSize: 14,
+        paddingRight: 40,
+        paddingTop: 12,
+    },
+    greetText: {
+        color: 'white',
+        fontSize: 17,
+        textAlign: 'left',
+    },
+
+    favicon: {
+        borderTopLeftRadius: 25,
+        borderTopRightRadius: 25,
+        borderBottomLeftRadius: 25,
+        borderBottomRightRadius: 25,
+        maxWidth: 50,
+        maxHeight: 40,
+        paddingTop: 10,
+        padding: 5,
+        borderWidth: 1,
+        borderColor: '#fff',
+        alignSelf: 'flex-end',
     }
 });
 

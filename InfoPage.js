@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, View, Text, Pressable, Linking } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, Pressable, Linking, Image, ImageBackground } from 'react-native';
 import styles from './assets/jsx/index';
 
 
@@ -18,6 +18,7 @@ function InfoPage({ navigation }) {
 
     return (
         <SafeAreaView style={styles.appContainer}>
+            <ImageBackground style={styles.appContainer} source={require('./assets/images/decor.jpg')}>
             <ScrollView>
                 <Text style={styles.text}>Information Portal! </Text>
 
@@ -43,6 +44,7 @@ function InfoPage({ navigation }) {
 
                 </View>
             </ScrollView>
+        </ImageBackground>
         </SafeAreaView>
     );
 }

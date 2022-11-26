@@ -7,6 +7,8 @@ import Login from './auth/Login';
 import Forgot from './auth/Forgot';
 import Register from './auth/Register';
 import MemberHome from './Members/MemberHome';
+import Profile from './Members/Profile';
+import Deposit from './Members/Deposit';
 
 
 /*Create Stack For Navigations*/
@@ -18,18 +20,22 @@ const Stack = createNativeStackNavigator();
 */
 const App = () => {
     return (
-    <>
-    <NavigationContainer>
-            <Stack.Navigator screenOptions={{header: () => null}}>
-              <Stack.Screen name="Home" component={Home} />
-              <Stack.Screen name="Login" component={Login} />
-              <Stack.Screen name="Forgot" component={Forgot} />
-              <Stack.Screen name="Register" component={Register} />
-              <Stack.Screen name="InfoPage" component={InfoPage} />
-              <Stack.Screen name="MemberHome" component={MemberHome} />
-            </Stack.Navigator>
-    </NavigationContainer>
-    </>
+        <>
+            <NavigationContainer>
+
+                <Stack.Navigator screenOptions={{header: () => null}}>
+                    <Stack.Screen name="Home" component={Home} />
+                    <Stack.Screen name="Login" component={Login} />
+                    <Stack.Screen name="Forgot" component={Forgot} />
+                    <Stack.Screen name="Register" component={Register} />
+                    <Stack.Screen name="InfoPage" component={InfoPage} />
+                    <Stack.Screen name="MemberHome" component={MemberHome} />
+                    <Stack.Screen name="Profile" component={Profile} />
+                    <Stack.Screen name="Deposit" component={Deposit} />
+                </Stack.Navigator>
+
+            </NavigationContainer>
+        </>
     );
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, View, Text, Pressable, Image } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, Pressable, Image, ImageBackground } from 'react-native';
 import styles from './assets/jsx/index';
 
 
@@ -19,10 +19,11 @@ function Home({ navigation }) {
     }
     return (
         <SafeAreaView style={styles.appContainer}>
+            <ImageBackground style={styles.appContainer} source={require('./assets/images/decor.jpg')}>
             <ScrollView>
                 <Text style={styles.text}>Your Number One Utility Payment Platform In Africa! </Text>
 
-                <Pressable onPress={infoHandler}>
+                    <Pressable onPress={infoHandler} style={{flex: 1, alignContent: 'flex-end', justifyContent: 'flex-end',} }>
                         <Image style={styles.iconImage} source={require('./assets/images/icons/about.png')}></Image>
                     </Pressable>
 
@@ -36,7 +37,8 @@ function Home({ navigation }) {
                         <Text style={styles.btnText}>Already A Member? Login</Text>
                     </Pressable>
                 </View>
-            </ScrollView>
+                </ScrollView>
+            </ImageBackground>
         </SafeAreaView>
     );
 }

@@ -8,7 +8,7 @@ import { Image, View, Text, StyleSheet } from 'react-native';
 const Header = () => {
     return (
         <View style={styles.header}>
-            <Image source={require('../assets/images/logo.png')} resizeMode= 'stretch' title="Official Logo" style={styles.favicon} />
+            <Image source={require('../assets/images/logo.png')} resizeMode= 'contain' title="Official Logo" style={styles.favicon} />
             <Text style={styles.text}>Fondo</Text>
             <Text style={styles.text1}>Ex</Text>
         </View>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, View, Text, TextInput, Pressable, Image, TouchableOpacity, Modal, Slider } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, TextInput, Pressable, Image, TouchableOpacity, Modal, Slider, ImageBackground,  } from 'react-native';
 import Header from '../components/Header';
 import styles from '../assets/jsx/index';
 
@@ -44,6 +44,7 @@ function Register({ navigation }) {
 
     return (
         <SafeAreaView style={styles.appContainer}>
+            <ImageBackground style={styles.appContainer} source={require('../assets/images/decor.jpg')}>
 
             {/*ALERT FOR USERS BEGIN */}
             <Modal
@@ -90,7 +91,7 @@ function Register({ navigation }) {
                         <Text style={styles.label}>Last Name</Text>
                         <TextInput style={styles.textInput} onChangeText={(value) => {setLname(value)}} maxLength={20} placeholder="Expreso" />
                         <Text style={styles.label}>Email ID</Text>
-                        <TextInput style={styles.textInput} onChangeText={(value) => { setEmail(value) }} maxLength={50} placeholder="fondoex@member.com" />
+                            <TextInput style={styles.textInput} onChangeText={(value) => { setEmail(value) }} maxLength={50} keyboardType='email-address' placeholder="fondoex@member.com" />
                         <Text style={styles.label}>Password</Text>
                         <TextInput style={styles.textInput} onChangeText={(value) => { setPassword(value) }} secureTextEntry={true} maxLength={20} placeholder="**********" />
 
@@ -106,7 +107,8 @@ function Register({ navigation }) {
 
                     <Text style={styles.footText}>Your Number One Utility Payment Platform In Africa! </Text>
                 </View>
-            </ScrollView>
+                </ScrollView>
+            </ImageBackground>
         </SafeAreaView>
     );
 }

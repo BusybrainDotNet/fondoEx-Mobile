@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, View, Text, TextInput, Pressable, Image, TouchableOpacity, Modal } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, TextInput, Pressable, Image, TouchableOpacity, Modal, ImageBackground } from 'react-native';
 import Header from '../components/Header';
 import styles from '../assets/jsx/index';
 
@@ -48,6 +48,7 @@ function Forgot({ navigation }) {
 
     return (
         <SafeAreaView style={styles.appContainer}>
+            <ImageBackground style={styles.appContainer} source={require('../assets/images/decor.jpg')}>
 
             {/*ALERT FOR USERS BEGIN */}
             <Modal
@@ -87,7 +88,7 @@ function Forgot({ navigation }) {
                         <Text style={styles.text}>Reset Password</Text>
 
                         <Text style={styles.label}>Email ID</Text>
-                        <TextInput onChangeText={(value) => { setEmail(value) } } style={styles.textInput} placeholder="fondoex@member.com" />
+                            <TextInput onChangeText={(value) => { setEmail(value) }} style={styles.textInput} keyboardType='email-address' placeholder="fondoex@member.com" />
 
                         <Pressable onPress={forgotFormHandler} style={({ pressed }) => ({ backgroundColor: pressed ? '#2c3691' : '#1a84bc', marginTop: 30, padding: 15, borderRadius: 5, })}>
                             <Text style={{ color: '#fff', textAlign: 'center' }}>Continue</Text>
@@ -100,7 +101,8 @@ function Forgot({ navigation }) {
                     </View>
                     <Text style={styles.footText}>Your Number One Utility Payment Platform In Africa! </Text>
                 </View>
-            </ScrollView>
+                </ScrollView>
+            </ImageBackground>
         </SafeAreaView>
     );
 }
