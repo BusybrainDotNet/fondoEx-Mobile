@@ -38,18 +38,21 @@ function Home({ navigation }) {
 
                     <View style={styles.serviceBox}>
                         <Pressable onPress={memberHomeHandler} style={styles.link}>
+                            <Image source={require('../assets/images/icons/rewards.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                             <Text style={styles.textBox}>Rewards &  Referrals </Text>
                         </Pressable>
                     </View>
 
                     <View style={styles.serviceBox}>
                         <Pressable onPress={loginHandler} style={styles.link}>
+                            <Image source={require('../assets/images/icons/history.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                             <Text style={styles.textBox}>Transaction History</Text>
                         </Pressable>
                     </View>
 
                     <View style={styles.serviceBox}>
                         <Pressable onPress={loginHandler} style={styles.link}>
+                            <Image source={require('../assets/images/icons/topup.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                             <Text style={styles.textBox} >Mobile Top Up</Text>
                         </Pressable>
                     </View>
@@ -60,21 +63,23 @@ function Home({ navigation }) {
                 <View style={styles.favBox}>
 
                     <View style={styles.serviceBox}>
-                            <Pressable onPress={memberHomeHandler} style={styles.link}>
-                                <Image source={require('../assets/images/icons/market.png')} style={styles.boxImage }></Image>
+                         <Pressable onPress={memberHomeHandler} style={styles.link}>
+                            <Image source={require('../assets/images/icons/topup.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                             <Text style={styles.textBox}>Mobile Top Up </Text>
                         </Pressable>
                     </View>
 
                     <View style={styles.serviceBox}>
                         <Pressable onPress={loginHandler} style={styles.link}>
-                                <Text style={styles.textBox}>Int.Mobile Top Up</Text>
+                             <Image source={require('../assets/images/icons/topup.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
+                             <Text style={styles.textBox}>Global Mobile Top Up</Text>
                         </Pressable>
                     </View>
 
                     <View style={styles.serviceBox}>
                         <Pressable onPress={loginHandler} style={styles.link}>
-                                <Text style={styles.textBox}>Data Bundles</Text>
+                             <Image source={require('../assets/images/icons/data.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
+                             <Text style={styles.textBox}>Data Bundles</Text>
                         </Pressable>
                     </View>
 
@@ -84,18 +89,21 @@ function Home({ navigation }) {
 
                     <View style={styles.serviceBox}>
                         <Pressable onPress={memberHomeHandler} style={styles.link}>
-                                <Text style={styles.textBox}>Electricity Payment </Text>
+                             <Image source={require('../assets/images/icons/electric.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
+                             <Text style={styles.textBox}>Electricity Payment </Text>
                         </Pressable>
                     </View>
 
                     <View style={styles.serviceBox}>
                         <Pressable onPress={loginHandler} style={styles.link}>
+                            <Image source={require('../assets/images/icons/tv.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                             <Text style={styles.textBox}>TV Subscription</Text>
                         </Pressable>
                     </View>
 
                     <View style={styles.serviceBox}>
                         <Pressable onPress={loginHandler} style={styles.link}>
+                            <Image source={require('../assets/images/icons/e-pin.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                             <Text style={styles.textBox}>Educational E-Pins</Text>
                         </Pressable>
                     </View>
@@ -109,18 +117,21 @@ function Home({ navigation }) {
 
                     <View style={styles.serviceBox}>
                         <Pressable onPress={memberHomeHandler} style={styles.link}>
+                            <Image source={require('../assets/images/icons/deposit.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                             <Text style={styles.textBox}>Make Deposit </Text>
                         </Pressable>
                      </View>
 
                         <View style={styles.serviceBox}>
                             <Pressable onPress={memberHomeHandler} style={styles.link}>
+                                <Image source={require('../assets/images/icons/internal.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.textBox}>Internal Transfer </Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
                             <Pressable onPress={loginHandler} style={styles.link}>
+                                <Image source={require('../assets/images/icons/external.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.textBox}>External Transfer</Text>
                             </Pressable>
                         </View>
@@ -133,18 +144,21 @@ function Home({ navigation }) {
 
                     <View style={styles.serviceBox}>
                         <Pressable onPress={memberHomeHandler} style={styles.link}>
+                        <Image source={require('../assets/images/icons/market.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                             <Text style={styles.textBox}>Quick Cash</Text>
                         </Pressable>
                     </View>
 
                     <View style={styles.serviceBox}>
                         <Pressable onPress={loginHandler} style={styles.link}>
-                            <Text style={styles.textBox}>KYC</Text>
+                            <Image source={require('../assets/images/icons/kyc.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
+                            <Text style={styles.textBox}>Get Verified</Text>
                         </Pressable>
                     </View>
 
                     <View style={styles.serviceBox}>
                         <Pressable onPress={loginHandler} style={styles.link}>
+                            <Image source={require('../assets/images/icons/contact.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                             <Text style={styles.textBox}>Support</Text>
                         </Pressable>
                     </View>

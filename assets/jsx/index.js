@@ -131,8 +131,8 @@ const styles = StyleSheet.create({
     },
 
     boxImage: {
-        width: 20,
-        height: 15,
+        width: 25,
+        height: 20,
     },
 
     link: {
