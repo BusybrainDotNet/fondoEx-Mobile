@@ -55,10 +55,9 @@ Handle FOrm Submittion
                 {/*ALERT FOR USERS BEGIN */}
             <Modal
                 transparent={true}
-                    visible={showFormFieldWarning}
-                transparent={true}
+                visible={showFormFieldWarning}
                 animationType='slide'
-                    onRequestClose={() => { setShowFormFieldWarning(false) }}
+                onRequestClose={() => { setShowFormFieldWarning(false) }}
                 hardwareAccelerated={true}
             >
                 <View style={styles.centered_view}>
@@ -83,7 +82,6 @@ Handle FOrm Submittion
                 <Modal
                     transparent={true}
                     visible={showLoginWarning}
-                    transparent={true}
                     animationType='slide'
                     onRequestClose={() => { setShowLoginWarning(false) }}
                     hardwareAccelerated={true}

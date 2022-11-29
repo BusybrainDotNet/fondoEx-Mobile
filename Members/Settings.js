@@ -18,67 +18,72 @@ function Settings({ navigation }) {
 
         <SafeAreaView style={styles.appContainer}>
 
-            <ScrollView style={styles.appContainer}>
-                <View style={{ padding: 10, }}>
-                    <Text style={{ color: '#385E72', fontSize: 16, padding: 5, }}>My Settings </Text>
+            <ImageBackground style={styles.appContainer} source={require('../assets/images/decor.jpg')}>
 
-                    <View style={styles.favBox}>
+                <ScrollView style={styles.appContainer}>
 
-                        <View style={styles.serviceBox}>
-                            <Pressable onPress={memberHomeHandler} style={styles.link}>
-                                <Text style={styles.textBox}>Rewards &  Referrals </Text>
-                            </Pressable>
+                    <View style={{ padding: 10, }}>
+                        <Text style={{ color: '#385E72', fontSize: 16, padding: 5, }}>My Settings </Text>
+
+                        <View style={styles.favBox}>
+
+                            <View style={styles.serviceBox}>
+                                <Pressable onPress={memberHomeHandler} style={styles.link}>
+                                    <Text style={styles.textBox}>Rewards &  Referrals </Text>
+                                </Pressable>
+                            </View>
+
+                            <View style={styles.serviceBox}>
+                                <Pressable onPress={loginHandler} style={styles.link}>
+                                    <Text style={styles.textBox}>Transaction History</Text>
+                                </Pressable>
+                            </View>
+
+                            <View style={styles.serviceBox}>
+                                <Pressable onPress={loginHandler} style={styles.link}>
+                                    <Text style={styles.textBox} >Mobile Top Up</Text>
+                                </Pressable>
+                            </View>
+
                         </View>
 
-                        <View style={styles.serviceBox}>
-                            <Pressable onPress={loginHandler} style={styles.link}>
-                                <Text style={styles.textBox}>Transaction History</Text>
-                            </Pressable>
-                        </View>
+                        
 
-                        <View style={styles.serviceBox}>
-                            <Pressable onPress={loginHandler} style={styles.link}>
-                                <Text style={styles.textBox} >Mobile Top Up</Text>
-                            </Pressable>
-                        </View>
+                        <Text style={{ color: '#fff', fontSize: 16, padding: 5, }}>Others </Text>
 
+                        <View style={styles.favBox}>
+
+                            <View style={styles.serviceBox}>
+                                <Pressable onPress={memberHomeHandler} style={styles.link}>
+                                    <Text style={styles.textBox}>Quick Cash & Loans </Text>
+                                </Pressable>
+                            </View>
+
+                            <View style={styles.serviceBox}>
+                                <Pressable onPress={loginHandler} style={styles.link}>
+                                    <Text style={styles.textBox}>KYC</Text>
+                                </Pressable>
+                            </View>
+
+                            <View style={styles.serviceBox}>
+                                <Pressable onPress={loginHandler} style={styles.link}>
+                                    <Text style={styles.textBox}>Support</Text>
+                                </Pressable>
+                            </View>
+
+                        </View>
                     </View>
 
-                    
 
-                    <Text style={{ color: '#fff', fontSize: 16, padding: 5, }}>Others </Text>
-
-                    <View style={styles.favBox}>
-
-                        <View style={styles.serviceBox}>
-                            <Pressable onPress={memberHomeHandler} style={styles.link}>
-                                <Text style={styles.textBox}>Quick Cash & Loans </Text>
-                            </Pressable>
-                        </View>
-
-                        <View style={styles.serviceBox}>
-                            <Pressable onPress={loginHandler} style={styles.link}>
-                                <Text style={styles.textBox}>KYC</Text>
-                            </Pressable>
-                        </View>
-
-                        <View style={styles.serviceBox}>
-                            <Pressable onPress={loginHandler} style={styles.link}>
-                                <Text style={styles.textBox}>Support</Text>
-                            </Pressable>
-                        </View>
-
+                    <View style={{padding: 10, }}>
+                        <Text style={{color: '#fff'}}>1-Tap Payment</Text>
                     </View>
-                </View>
 
+                </ScrollView>
 
-                <View style={{ backgroundColor: '#fff', padding: 10, }}>
-                    <Text>1-Tap Payment</Text>
-                </View>
+            </ImageBackground>
 
-            </ScrollView>
-
-            </SafeAreaView>
+        </SafeAreaView>
     );
 }
 

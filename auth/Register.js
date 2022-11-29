@@ -8,6 +8,7 @@ import styles from '../assets/jsx/index';
 * Registration Page For Users
 */
 function Register({ navigation }) {
+
     /*
     * Define Route Handlers
     */
@@ -17,6 +18,7 @@ function Register({ navigation }) {
     const registerHandler = () => {
         navigation.navigate('Register');
     }
+    
 
     /*
     * Define Form State Handlers
@@ -50,7 +52,6 @@ function Register({ navigation }) {
             <Modal
                 transparent={true}
                 visible={showWarning}
-                transparent={true}
                 animationType='slide'
                 onRequestClose={() => { setShowWarning(false) }}
                 hardwareAccelerated={true}

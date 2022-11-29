@@ -9,6 +9,7 @@ import Register from './auth/Register';
 import MemberHome from './Members/MemberHome';
 import Profile from './Members/Profile';
 import Deposit from './Members/Deposit';
+import Settings from './Members/Settings';
 
 
 /*Create Stack For Navigations*/
@@ -32,6 +33,7 @@ const App = () => {
                     <Stack.Screen name="MemberHome" component={MemberHome} />
                     <Stack.Screen name="Profile" component={Profile} />
                     <Stack.Screen name="Deposit" component={Deposit} />
+                    <Stack.Screen name="Settings" component={Settings} />
                 </Stack.Navigator>
 
             </NavigationContainer>

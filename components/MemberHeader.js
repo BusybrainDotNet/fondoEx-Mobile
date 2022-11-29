@@ -6,12 +6,26 @@ import Profile from '../Members/Profile';
 import Deposit from '../Members/Deposit';
 
 
+
+
 //Declare Bottom Tab As Tab
 const Stack = createNativeStackNavigator();
 
 
 //Main App Function
-const MemberHeader = ({ navigation }) => {
+function MemberHeader ({ navigation }) {
+
+/*
+* Define Route Handlers
+*/
+const ProfilePageHandler = () => {
+    navigation.navigate('Profile');
+}
+const depositPageHandler = () => {
+    navigation.navigate('Deposit');
+}
+
+
 
     const [username, setUsername] = useState('Tom Kim');
     const [bal, setBal] = useState('#25,000');
@@ -24,19 +38,20 @@ const MemberHeader = ({ navigation }) => {
 
             <View style={styles.header}>
                 <Text style={styles.greetText}>Welcome Back, {"\n"}{username}</Text>
-                <Pressable onPress={Profile} style={{flex: 1, alignContent: 'flex-end', justifyContent: 'flex-end', }}>
-                        <Image source={require('../assets/images/profileImg.png')} resizeMode='contain' title="Profile Image" style={styles.favicon} />
-                    </Pressable>
+
+                <Pressable onPress={ProfilePageHandler} style={{flex: 1, alignContent: 'flex-end', justifyContent: 'flex-end', }}>
+                    <Image source={require('../assets/images/profileImg.png')} resizeMode='contain' title="Profile Image" style={styles.favicon} />
+                </Pressable>
             </View>
 
-                <View style={styles.fixToText }>
+            <View style={styles.fixToText }>
                 <Text style={styles.textWallet}>Wallet Balance:  </Text>
                 <Text style={styles.textAmount}>{bal} </Text>
 
-                <Pressable onPress={Deposit} style={styles.smallBtn}>
+                <Pressable onPress={depositPageHandler} style={styles.smallBtn}>
                     <Text style={{ color: '#000', fontSize: 14, fontWeight: '800', textAlign: 'center' }}>  Top Up </Text>
                 </Pressable>
-                </View>
+            </View>
 
         </ImageBackground>
     );

@@ -13,8 +13,8 @@ function Profile({ navigation }) {
     const [bal, setBal] = useState('#25,000');
 
 
-    const loginHandler = () => {
-        navigation.navigate('Login');
+    const depositPageHandler = () => {
+        navigation.navigate('Deposit');
     }
     const memberHomeHandler = () => {
         navigation.navigate('MemberHome');
@@ -37,7 +37,7 @@ function Profile({ navigation }) {
                     <Text style={styles.textWallet}>Wallet Balance:  </Text>
                     <Text style={styles.textAmount}>{bal} </Text>
 
-                    <Pressable onPress={Deposit} style={styles.smallBtn}>
+                    <Pressable onPress={memberHomeHandler} style={styles.smallBtn}>
                         <Text style={{ color: '#000', fontSize: 14, fontWeight: '800', textAlign: 'center' }}>  Upload Image </Text>
                     </Pressable>
                 </View>
@@ -49,13 +49,10 @@ function Profile({ navigation }) {
 
                     <View style={styles.imageContainer}>
 
-                        <Pressable onPress={memberHomeHandler} style={({ pressed }) => ({ backgroundColor: pressed ? '#2c3691' : '#1a84bc', margin: 35, padding: 15, borderRadius: 5 })}>
+                        <Pressable onPress={depositPageHandler} style={({ pressed }) => ({ backgroundColor: pressed ? '#2c3691' : '#1a84bc', margin: 35, padding: 15, borderRadius: 5 })}>
                             <Text style={{ color: '#fff' }}>Make A Transaction</Text>
                         </Pressable>
-
-                        <Pressable onPress={loginHandler} style={styles.link}>
-                            <Text style={styles.btnText}>Logout</Text>
-                        </Pressable>
+                        
                     </View>
                 </ScrollView>
 
