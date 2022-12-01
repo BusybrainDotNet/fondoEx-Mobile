@@ -23,17 +23,18 @@ function MemberHome({navigation}) {
             <Tab.Navigator
                 screenOptions={({ route }) => ({
                     header: () => null,
-                tabBarIcon: ({ tintColor, image, focused }) => {
+                    tabBarIcon: ({ tintColor, image, focused }) => {
                     
-                    if (route.name === 'Home') {
-                        image = focused ? <Image source={require('../assets/images/icons/market.png')} style={styles.boxImage}></Image> : <Image source={require('../assets/images/icons/market.png')} style={styles.boxImage}></Image>;
-                        size = focused ? 25 : 10;
-                    } else if (route.name === 'Deposit') {
-                        image = focused ? <Image source={require('../assets/images/icons/market.png')} style={styles.boxImage}></Image> : <Image source={require('../assets/images/icons/market.png')} style={styles.boxImage}></Image>;
-                        size = focused ? 25 : 10;
-                    } 
-                }
-            })}>
+                        if (route.name === 'Home') {
+                            image = focused ? <Image source={require('../assets/images/icons/market.png')} style={styles.boxImage}></Image> : <Image source={require('../assets/images/icons/market.png')} style={styles.boxImage}></Image>;
+                            size = focused ? 25 : 10;
+                        } else if (route.name === 'Deposit') {
+                            image = focused ? <Image source={require('../assets/images/icons/market.png')} style={styles.boxImage}></Image> : <Image source={require('../assets/images/icons/market.png')} style={styles.boxImage}></Image>;
+                            size = focused ? 25 : 10;
+                        } 
+                    }
+                })
+            }>
                 <Tab.Screen name="Home" component={Home} />
                 <Tab.Screen name="Wallet" component={Deposit} />
                 <Tab.Screen name="Settings" component={Settings} />

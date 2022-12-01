@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { SafeAreaView, ScrollView, View, Text, Pressable, Linking, Image, ImageBackground } from 'react-native';
 import styles from './assets/jsx/index';
 
