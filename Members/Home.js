@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, View, Text, StyleSheet, TextInput, Pressable, TouchableOpacity, Image, ImageBackground } from 'react-native';
+import { RefreshControl } from 'react-native-gesture-handler';
+import { SafeAreaView, ScrollView, View, Text, Pressable, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import styles from '../assets/jsx/index'; 
 
 
@@ -11,6 +12,16 @@ import styles from '../assets/jsx/index';
 * Member Auth Home Screen Or Home Page For Members
 */
 function Home({ navigation }) {
+
+
+/*
+* Refresh Control For Application
+*/
+    const [Refreshing, setRefreshing] = useState(false);
+    const onRefresh = () => {
+        setRefreshing(true);
+    }
+
 
 /*
 * Define User Details
@@ -66,9 +77,7 @@ function Home({ navigation }) {
 
 
 
-            <ScrollView>
-
-                <ImageBackground style={styles.appContainer} source={require('../assets/images/decor.jpg')}>
+            <ScrollView  RefreshControl={<RefreshControl refreshing={Refreshing} onRefresh={onRefresh} colors={['#1a84bc']}/>}>
 
                     <View style={{padding:10, } }>
                         <Text style={{color: '#fff', fontSize: 16, padding: 5,}}>My Favorites </Text>
@@ -182,21 +191,21 @@ function Home({ navigation }) {
                     <View style={styles.favBox}>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={profilePageHandler} style={styles.link}>
+                            <Pressable onPress={profilePageHandler} style={styles.linkBox}>
                             <Image source={require('../assets/images/icons/market.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.textBox}>Quick Cash</Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.link}>
+                            <Pressable onPress={depositPageHandler}>
                                 <Image source={require('../assets/images/icons/kyc.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.textBox}>Get Verified</Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.link}>
+                            <Pressable onPress={depositPageHandler} style={styles.linkBox}>
                                 <Image source={require('../assets/images/icons/contact.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.textBox}>Support</Text>
                             </Pressable>
@@ -209,8 +218,6 @@ function Home({ navigation }) {
                     <View style={{padding: 10, }}>
                         <Text style={{color: '#fff'}}>1-Tap Payment</Text>
                     </View>
-
-                    </ImageBackground>
                 
                 </ScrollView>
 

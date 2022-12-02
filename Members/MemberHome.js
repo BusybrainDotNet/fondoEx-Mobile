@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { SafeAreaView,  Image, } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import styles from '../assets/jsx/index';
@@ -17,6 +17,8 @@ const Tab = createBottomTabNavigator();
 * Member Auth Home Screen Or Home Page For Members
 */
 function MemberHome({navigation}) {
+
+
 
     return (
         <SafeAreaView style={styles.appContainer}>

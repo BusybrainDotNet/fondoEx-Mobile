@@ -129,11 +129,6 @@ const styles = StyleSheet.create({
         margin: 2,
     },
 
-    boxImage: {
-        width: 25,
-        height: 20,
-    },
-
     link: {
         color: '#fff',
         fontSize: 14,
@@ -216,9 +211,8 @@ const styles = StyleSheet.create({
 
    favBox: {
        flexDirection: 'row',
-       justifyContent: 'center',
+       justifyContent: 'space-evenly',
        alignContent: 'center',
-       padding: 2,
     },
 
     serviceBox: {
@@ -228,17 +222,29 @@ const styles = StyleSheet.create({
         borderColor: '#1a84bc',
         borderRadius: 5,
         color: '#385E72', 
-        margin: 3,
-        justifyContent: 'center',
+        margin: 5,
+        justifyContent: 'space-around',
         alignContent: 'center',
     },
+
+    boxImage: {
+        width: 20,
+        height: 25,
+    },
+
     textBox: {
         color: '#000',
         fontSize: 10,
         justifyContent: 'center',
         alignContent: 'center',
     },
-
+    linkBox: {
+        fontSize: 14,
+        padding: 10,
+        textAlign: 'center',
+        justifyContent: 'center',
+        alignContent: 'center',
+    },
 
     header: {
         height: 70,
