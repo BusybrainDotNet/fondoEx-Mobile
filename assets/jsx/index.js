@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     appContainer: {
         flex: 1,
         fontFamily: 'open sans',
+        backgroundColor: '#000',
     },
     backgroundImageContainer: {
         flex: 1,

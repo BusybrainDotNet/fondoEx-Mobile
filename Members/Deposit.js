@@ -9,31 +9,58 @@ import styles from '../assets/jsx/index';
 */
 function Deposit({ navigation }) {
 
-    const loginHandler = () => {
-        navigation.navigate('Login');
-    }
-    const memberHomeHandler = () => {
+    
+   /*
+    * Define Page Navigations
+    */  
+    const homePageHandler = () => {
         navigation.navigate('MemberHome');
     }
+    const depositPageHandler = () => {
+        navigation.navigate('Deposit');
+    }
+    const profilePageHandler = () => {
+        navigation.navigate('Profile');
+    }
+    const settingsPageHandler = () => {
+        navigation.navigate('Settings');
+    }
+
+
+
+    /*
+    * Define User Details
+    */  
+    const [username, setUsername] = useState('Tom Kim');
+    const [bal, setBal] = useState('#25,000');
+
 
 
     return (
         <SafeAreaView style={styles.appContainer}>
 
-            <ScrollView style={styles.appContainer}>
-                <Text style={styles.smallText}>My FondoEx Wallet</Text>
+            
 
-                <View style={styles.imageContainer}>
+            <ImageBackground style={{maxHeight: 150,}} source={require('../assets/images/cta-bg.jpg')}>
 
-                    <Pressable onPress={memberHomeHandler} style={({ pressed }) => ({ backgroundColor: pressed ? '#2c3691' : '#1a84bc', margin: 35, padding: 15, borderRadius: 5 })}>
-                        <Text style={{ color: '#fff' }}>Make A Transaction</Text>
-                    </Pressable>
+            <View style={styles.header}>
+                <Text style={styles.greetText}>Welcome Back, {"\n"}{username}</Text>
 
-                    <Pressable onPress={loginHandler} style={styles.link}>
-                        <Text style={styles.btnText}>Logout</Text>
-                    </Pressable>
-                </View>
-            </ScrollView>
+                <Pressable onPress={profilePageHandler} style={{flex: 1, alignContent: 'flex-end', justifyContent: 'flex-end', }}>
+                    <Image source={require('../assets/images/profileImg.png')} resizeMode='contain' title="Profile Image" style={styles.favicon} />
+                </Pressable>
+            </View>
+
+            <View style={styles.fixToText }>
+                <Text style={styles.textWallet}>Wallet Balance:  </Text>
+                <Text style={styles.textAmount}>{bal} </Text>
+
+                <Pressable onPress={depositPageHandler} style={styles.smallBtn}>
+                    <Text style={{ color: '#000', fontSize: 14, fontWeight: '800', textAlign: 'center' }}>  Top Up </Text>
+                </Pressable>
+            </View>
+
+            </ImageBackground>
 
         </SafeAreaView>
     );

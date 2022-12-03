@@ -17,18 +17,10 @@ function Home({ navigation }) {
 /*
 * Refresh Control For Application
 */
-    const [Refreshing, setRefreshing] = useState(false);
-    const onRefresh = () => {
-        setRefreshing(true);
-    }
-
-
-/*
-* Define User Details
-*/  
-    const [username, setUsername] = useState('Tom Kim');
-    const [bal, setBal] = useState('#25,000');
-
+    // const [Refreshing, setRefreshing] = useState(false);
+    // const onRefresh = () => {
+    //     setRefreshing(true);
+    // }
 
 /*
 * Define Route Handlers
@@ -52,32 +44,13 @@ function Home({ navigation }) {
 
         <SafeAreaView style={styles.appContainer}>
 
-            <ImageBackground style={{maxHeight: 150,}} source={require('../assets/images/cta-bg.jpg')}>
-
             <View style={styles.header}>
-                <Text style={styles.greetText}>Welcome Back, {"\n"}{username}</Text>
-
-                <Pressable onPress={profilePageHandler} style={{flex: 1, alignContent: 'flex-end', justifyContent: 'flex-end', }}>
-                    <Image source={require('../assets/images/profileImg.png')} resizeMode='contain' title="Profile Image" style={styles.favicon} />
-                </Pressable>
+                <Image source={require('../assets/images/logo.png')} resizeMode= 'contain' title="Official Logo" style={styles.favicon} />
+                <Text style={styles.text}>Fondo</Text>
+                <Text style={styles.text1}>Ex</Text>
             </View>
 
-            <View style={styles.fixToText }>
-                <Text style={styles.textWallet}>Wallet Balance:  </Text>
-                <Text style={styles.textAmount}>{bal} </Text>
-
-                <Pressable onPress={depositPageHandler} style={styles.smallBtn}>
-                    <Text style={{ color: '#000', fontSize: 14, fontWeight: '800', textAlign: 'center' }}>  Top Up </Text>
-                </Pressable>
-            </View>
-
-            </ImageBackground>
-
-
-
-
-
-            <ScrollView  RefreshControl={<RefreshControl refreshing={Refreshing} onRefresh={onRefresh} colors={['#1a84bc']}/>}>
+            <ScrollView  refreshControl={<RefreshControl/>}>
 
                     <View style={{padding:10, } }>
                         <Text style={{color: '#fff', fontSize: 16, padding: 5,}}>My Favorites </Text>
