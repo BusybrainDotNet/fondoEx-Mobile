@@ -5,15 +5,18 @@ import { StyleSheet } from 'react-native';
 * CSS Styling Of The App
 */
 const styles = StyleSheet.create({
+
     appContainer: {
         flex: 1,
         fontFamily: 'open sans',
         backgroundColor: '#000',
     },
+
     backgroundImageContainer: {
         flex: 1,
         padding: 5
     },
+
     imageContainer: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -44,12 +47,14 @@ const styles = StyleSheet.create({
         padding: 20,
         textAlign: 'center'
     },
+
     label: {
         color: '#fff',
         fontSize: 12,
         marginTop: 20,
         fontFamily: 'open sans'
     },
+
     textInput: {
         color: '#595959',
         fontSize: 16,
@@ -61,35 +66,41 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
 
     },
+
     dangerText: {
         color: '#ff0000',
         fontSize: 12,
         margin: 10,
         textAlign: 'center',
     },
+
     smallText: {
         color: '#fff',
         fontSize: 14,
         marginTop: 20,
         textAlign: 'left'
     },
+
     bigText: {
         color: '#fff',
         fontSize: 18,
         textAlign: 'center'
     },
+
     smallBlackText: {
         color: '#000',
         fontSize: 14,
         margin: 10,
         textAlign: 'left'
     },
+
     bigBlackText: {
         color: '#000',
         fontSize: 18,
         margin: 10,
         textAlign: 'left'
     },
+
     footText: {
         color: '#fff',
         fontSize: 12,
@@ -110,6 +121,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
+
     image: {
         borderRadius: 100 / 2,
         padding: 30,
@@ -136,10 +148,12 @@ const styles = StyleSheet.create({
         padding: 20,
         textAlign: 'left'
     },
+
     buttonContainer: {
         color: '#595959',
         margin: 20,
     },
+
     smallBtn: {
         textColor: '#fff',
         backgroundColor: '#fff',
@@ -149,6 +163,7 @@ const styles = StyleSheet.create({
         fontWeight: 600,
         width: 80,
     },
+    
     btn: {
         width: '60%',
         textColor: '#fff',
@@ -162,6 +177,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         textAlign: 'center',
     },
+
     btnText: {
         color: '#1a84bc',
     },
@@ -239,6 +255,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignContent: 'center',
     },
+
     linkBox: {
         fontSize: 14,
         padding: 10,
@@ -255,6 +272,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         opacity: 9,
     },
+
     fixToText: {
         flexDirection: 'row',
         justifyContent: 'flex-end'
@@ -266,12 +284,14 @@ const styles = StyleSheet.create({
         paddingRight: 1,
         paddingTop: 10,
     },
+
     textAmount: {
         color: 'white',
         fontSize: 14,
         paddingRight: 40,
         paddingTop: 12,
     },
+
     greetText: {
         color: 'white',
         fontSize: 17,
@@ -291,6 +311,7 @@ const styles = StyleSheet.create({
         borderColor: '#fff',
         alignSelf: 'flex-end',
     }
+    
 });
 
 
