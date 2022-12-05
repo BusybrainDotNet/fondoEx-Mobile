@@ -38,7 +38,9 @@ function Home({ navigation }) {
     const settingsPageHandler = () => {
         navigation.navigate('Settings');
     }
-
+    const notificationPageHandler = () => {
+        navigation.navigate('Notification');
+    }
 
 
     return (
@@ -46,20 +48,30 @@ function Home({ navigation }) {
         <SafeAreaView style={styles.appContainer}>
 
             <View style={styles.header}>
-            <Image source={require('../assets/images/icons/morning.png')} resizeMode='contain' title="Notify" style={{radius: '50%', maxWidth: 60, maxHeight: 25,}} />
-                <Text style={{color: '#000', fontSize: 16, alignContent: 'center', justifyContent: 'center', }}>Good Morning, {username}</Text>
-                <Image source={require('../assets/images/icons/notification.png')} resizeMode='contain' title="Notify" style={{radius: '50%', maxWidth: 30, maxHeight: 20, marginLeft: 60, }} />
+                <Image source={require('../assets/images/icons/morning.png')} resizeMode='contain' title="Notify" style={{radius: '50%', maxWidth: 60, maxHeight: 25,}} />
+                <Text style={{color: '#000', fontSize: 14, alignContent: 'center', justifyContent: 'center', }}>Good Morning, {username}</Text>
+                <Pressable onPress={notificationPageHandler}>
+                    <Image source={require('../assets/images/icons/notification.png')} resizeMode='contain' title="Notify" style={{radius: '50%', maxWidth: 30, maxHeight: 20, marginLeft: 60, }} />
+                </Pressable>
             </View>
 
             <ScrollView  refreshControl={<RefreshControl/>}>
 
                 <View style={{flexDirection: 'row'}}>
-                    <Text style={styles.addDeposit}>+</Text>
+
+                    <Pressable onPress={depositPageHandler}>
+                        <Text style={styles.addDeposit}>+</Text>
+                    </Pressable>
+
                     <View style={{backgroundColor: '#1a84bc', width: 250, borderRadius: 10, margin: 10, }}>
-                        <Text style={{marginLeft: 10, padding: 10, fontSize: 18, color: '#fff', }}>Wallet Balance </Text>
+                        <Text style={{marginLeft: 5, padding: 10, fontSize: 14, color: '#fff', }}>Wallet Balance </Text>
+
                         <View style={styles.balanceBox}>
-                            <Text style={{padding: 5, fontSize: 16, color: '#fff', }}> {bal} </Text>
-                            <Text style={{marginRight: 20, marginLeft: 10, padding: 8, fontSize: 12, color: '#fff', }}>+ Make Deposit</Text>
+                            <Text style={{padding: 5, fontSize: 18, color: '#fff', }}> {bal} </Text>
+
+                            <Pressable onPress={depositPageHandler}>
+                                <Text style={{marginRight: 20, marginLeft: 15, padding: 15, fontSize: 12, color: '#fff', }}>+ Make Deposit</Text>
+                            </Pressable>
                         </View>
                     </View>
                 </View>

@@ -7,14 +7,14 @@ import styles from '../assets/jsx/index';
 /*
 * Member Auth Home Screen Or Home Page For Members
 */
-function Deposit({ navigation }) {
+function Notification({ navigation }) {
 
     
-    /*
+   /*
     * Define Page Navigations
     */  
     const homePageHandler = () => {
-    navigation.navigate('MemberHome');
+        navigation.navigate('MemberHome');
     }
     const depositPageHandler = () => {
         navigation.navigate('Deposit');
@@ -25,9 +25,6 @@ function Deposit({ navigation }) {
     const settingsPageHandler = () => {
         navigation.navigate('Settings');
     }
-    const notificationPageHandler = () => {
-    navigation.navigate('Notification');
-}
 
 
 
@@ -77,4 +74,4 @@ function Deposit({ navigation }) {
 /*
 * Export Of The Main App To Screens
 */
-export default Deposit;
+export default Notification;
