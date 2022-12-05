@@ -25,14 +25,19 @@ function MemberHome({navigation}) {
             <Tab.Navigator
                 screenOptions={({ route }) => ({
                     header: () => null,
-                    tabBarIcon: ({ tintColor, image, focused }) => {
+                    tabBarIcon: ({ image, focused }) => {
                     
                         if (route.name === 'Home') {
-                            image = focused ? <Image source={require('../assets/images/icons/market.png')} style={styles.boxImage}></Image> : <Image source={require('../assets/images/icons/market.png')} style={styles.boxImage}></Image>;
-                            size = focused ? 25 : 10;
-                        } else if (route.name === 'Deposit') {
-                            image = focused ? <Image source={require('../assets/images/icons/market.png')} style={styles.boxImage}></Image> : <Image source={require('../assets/images/icons/market.png')} style={styles.boxImage}></Image>;
-                            size = focused ? 25 : 10;
+                            return <Image source={require('../assets/images/icons/dashboard.png')} resizeMode='contain' style={{width: 25, height: 30, }}></Image>
+                            
+                        } else if (route.name === 'Wallet') {
+                            return <Image source={require('../assets/images/icons/deposit.png')} resizeMode='contain' style={{width: 25, height: 30, }}></Image>
+
+                        } else if (route.name === 'Settings') {
+                            return <Image source={require('../assets/images/icons/settings.png')} resizeMode='contain' style={{width: 25, height: 30, }}></Image>
+
+                        } else if (route.name === 'Profile') {
+                            return <Image source={require('../assets/images/icons/contact.png')} resizeMode='contain' style={{width: 25, height: 30, }}></Image>
                         } 
                     }
                 })

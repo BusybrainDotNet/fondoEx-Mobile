@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     appContainer: {
         flex: 1,
         fontFamily: 'open sans',
-        backgroundColor: '#000',
+        backgroundColor: '#fff',
     },
 
     backgroundImageContainer: {
@@ -264,6 +264,15 @@ const styles = StyleSheet.create({
         alignContent: 'center',
     },
 
+    balanceBox: {
+        borderRadius: 5,
+        color: '#385E72', 
+        margin: 5,
+        alignContent: 'center',
+        justifyContent: 'flex-end',
+        flexDirection: 'row',
+    },
+    
     header: {
         height: 70,
         padding: 15,
@@ -310,8 +319,39 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#fff',
         alignSelf: 'flex-end',
+    },
+
+    header: {
+        top: 0,
+        height: 30,
+        padding: 5,
+        flexDirection: 'row',
+        marginBottom: 30,
+    },
+
+    textHome: {
+        color: '#1a84bc',
+        fontSize: 15,
+        textAlign: 'left',
+        paddingLeft: 100,
+        paddingTop: 5,
+    },
+
+    textHome1: {
+        color: '#fff',
+        fontSize: 15,
+        textAlign: 'left',
+        paddingTop: 5,
+    },
+
+    faviconHome: {
+        radius: '50%',
+        maxWidth: 80,
+        maxHeight: 40,
+        padding: 5
     }
     
+
 });
 
 

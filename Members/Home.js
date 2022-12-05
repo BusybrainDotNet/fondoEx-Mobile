@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RefreshControl } from 'react-native-gesture-handler';
-import { SafeAreaView, ScrollView, View, Text, Pressable, TouchableOpacity, Image, ImageBackground } from 'react-native';
+import { StatusBar, SafeAreaView, ScrollView, View, Text, Pressable, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import styles from '../assets/jsx/index'; 
 
 
@@ -13,7 +13,8 @@ import styles from '../assets/jsx/index';
 */
 function Home({ navigation }) {
 
-
+    const [username, setUsername] = useState('Tom Kim');
+    const [bal, setBal] = useState('#25,000');
 /*
 * Refresh Control For Application
 */
@@ -41,19 +42,30 @@ function Home({ navigation }) {
 
 
     return (
-
+        <>
         <SafeAreaView style={styles.appContainer}>
 
             <View style={styles.header}>
-                <Image source={require('../assets/images/logo.png')} resizeMode= 'contain' title="Official Logo" style={styles.favicon} />
-                <Text style={styles.text}>Fondo</Text>
-                <Text style={styles.text1}>Ex</Text>
+                <Image source={require('../assets/images/logo.png')} resizeMode='contain' title="Official Logo" style={styles.faviconHome} />
+                <Text style={styles.textHome}>Fondo</Text>
+                <Text style={styles.textHome1}>Ex</Text>
             </View>
 
             <ScrollView  refreshControl={<RefreshControl/>}>
 
-                    <View style={{padding:10, } }>
-                        <Text style={{color: '#fff', fontSize: 16, padding: 5,}}>My Favorites </Text>
+                <View style={{flexDirection: 'row'}}>
+                    <Text style={{marginTop: 10, marginRight: 20, marginLeft: 20, padding: 8, fontSize: 50, color: '#1a84bc', }}>+</Text>
+                    <View style={{backgroundColor: '#1a84bc', width: 250, borderRadius: 10, margin: 10, }}>
+                        <Text style={{padding: 10, fontSize: 18, color: '#fff', }}>Wallet Balance </Text>
+                        <View style={styles.balanceBox}>
+                            <Text style={{padding: 5, fontSize: 16, color: '#fff', }}> {bal} </Text>
+                            <Text style={{marginRight: 20, marginLeft: 10, padding: 8, fontSize: 12, color: '#fff', }}>+ Make Deposit</Text>
+                        </View>
+                    </View>
+                </View>
+                        
+                <View style={{padding:10, } }>
+                        <Text style={{color: '#1a84bc', fontSize: 16, padding: 5,}}>My Favorites </Text>
 
                     <View style={styles.favBox}>
 
@@ -80,7 +92,7 @@ function Home({ navigation }) {
 
                     </View>
 
-                        <Text style={{ color: '#fff', fontSize: 16, padding: 5, }}>Bill Payment </Text>
+                        <Text style={{ color: '#1a84bc', fontSize: 16, padding: 5, }}>Bill Payment </Text>
                     <View style={styles.favBox}>
 
                         <View style={styles.serviceBox}>
@@ -132,7 +144,7 @@ function Home({ navigation }) {
                     </View>
 
 
-                <Text style={{ color: '#fff', fontSize: 16, padding: 5, }}>My FondoEx Wallet </Text>
+                <Text style={{ color: '#1a84bc', fontSize: 16, padding: 5, }}>My FondoEx Wallet </Text>
 
                     <View style={styles.favBox}>
 
@@ -159,7 +171,7 @@ function Home({ navigation }) {
 
                         </View>
 
-                        <Text style={{ color: '#fff', fontSize: 16, padding: 5, }}>Others </Text>
+                        <Text style={{ color: '#1a84bc', fontSize: 16, padding: 5, }}>Others </Text>
 
                     <View style={styles.favBox}>
 
@@ -189,11 +201,11 @@ function Home({ navigation }) {
 
 
                     <View style={{padding: 10, }}>
-                        <Text style={{color: '#fff'}}>1-Tap Payment</Text>
+                        <Text style={{color: '#1a84bc'}}>1-Tap Payment</Text>
                     </View>
                 
                 </ScrollView>
-
+               
 
 
           {/*  <Stack.Navigator>
@@ -202,6 +214,7 @@ function Home({ navigation }) {
             </Stack.Navigator>
 */}
         </SafeAreaView>
+        </>
     );
 }
 
