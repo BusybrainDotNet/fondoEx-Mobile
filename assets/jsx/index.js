@@ -326,7 +326,7 @@ const styles = StyleSheet.create({
         height: 30,
         padding: 5,
         flexDirection: 'row',
-        marginBottom: 30,
+        margin: 5,
     },
 
     textHome: {
@@ -349,8 +349,20 @@ const styles = StyleSheet.create({
         maxWidth: 80,
         maxHeight: 40,
         padding: 5
-    }
+    },
     
+    addDeposit: {
+        marginTop: 15,
+        marginBottom: 10, 
+        marginRight: 20, 
+        marginLeft: 20, 
+        padding: 8, 
+        fontSize: 50, 
+        color: '#1a84bc',
+        borderWidth: 1,
+        borderColor: '#1a84bc', 
+        borderRadius: 100/2,
+    }
 
 });
 
