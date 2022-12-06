@@ -228,18 +228,17 @@ const styles = StyleSheet.create({
 
    favBox: {
        flexDirection: 'row',
-       justifyContent: 'space-evenly',
+       justifyContent: 'space-around',
        alignContent: 'center',
     },
 
     serviceBox: {
-        width: 100,
-        borderWidth: 1,
+        width: 90,
         backgroundColor: '#D9E4EC',
-        borderColor: '#1a84bc',
-        borderRadius: 5,
+        borderRadius: 10,
         color: '#385E72', 
-        margin: 5,
+        margin: 10,
+        padding: 0,
         justifyContent: 'space-around',
         alignContent: 'center',
     },
@@ -247,21 +246,19 @@ const styles = StyleSheet.create({
     boxImage: {
         width: 20,
         height: 25,
+        marginLeft: 5,
+        resizeMode: 'contain',
     },
 
-    textBox: {
-        color: '#000',
-        fontSize: 10,
-        justifyContent: 'center',
-        alignContent: 'center',
+    boxText: {
+        color: '#595959',
+        fontSize: 8,
+        fontWeight: 'bolder',
     },
 
-    linkBox: {
-        fontSize: 14,
+    boxLink: {
         padding: 10,
         textAlign: 'center',
-        justifyContent: 'center',
-        alignContent: 'center',
     },
 
     balanceBox: {

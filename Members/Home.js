@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RefreshControl } from 'react-native-gesture-handler';
-import { StatusBar, SafeAreaView, ScrollView, View, Text, Pressable, TouchableOpacity, Image, ImageBackground } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, Pressable, TouchableOpacity, Image,} from 'react-native';
 import styles from '../assets/jsx/index'; 
 
 
@@ -49,7 +49,7 @@ function Home({ navigation }) {
 
             <View style={styles.header}>
                 <Image source={require('../assets/images/icons/morning.png')} resizeMode='contain' title="Notify" style={{radius: '50%', maxWidth: 60, maxHeight: 25,}} />
-                <Text style={{color: '#000', fontSize: 14, alignContent: 'center', justifyContent: 'center', }}>Good Morning, {username}</Text>
+                <Text style={{color: '#595959', fontSize: 14, alignContent: 'center', justifyContent: 'center', }}>Good Morning, {username}</Text>
                 <Pressable onPress={notificationPageHandler}>
                     <Image source={require('../assets/images/icons/notification.png')} resizeMode='contain' title="Notify" style={{radius: '50%', maxWidth: 30, maxHeight: 20, marginLeft: 60, }} />
                 </Pressable>
@@ -77,54 +77,54 @@ function Home({ navigation }) {
                 </View>
                         
                 <View style={{padding:10, } }>
-                        <Text style={{color: '#1a84bc', fontSize: 16, padding: 5,}}>My Favorites </Text>
+                        <Text style={{color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>Quick Links </Text>
 
                     <View style={styles.favBox}>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={homePageHandler} style={styles.link}>
-                                <Image source={require('../assets/images/icons/rewards.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                <Text style={styles.textBox}>Rewards &  Referrals </Text>
+                            <Pressable onPress={homePageHandler} style={styles.boxLink}>
+                                <Image source={require('../assets/images/icons/internal.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
+                                <Text style={styles.boxText}>Referrals </Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={settingsPageHandler} style={styles.link}>
+                            <Pressable onPress={settingsPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/history.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                <Text style={styles.textBox}>Transaction History</Text>
+                                <Text style={styles.boxText}> Transactions</Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.link}>
+                            <Pressable onPress={depositPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/topup.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                <Text style={styles.textBox} >Mobile Top Up</Text>
+                                <Text style={styles.boxText} >Mobile Top-Up</Text>
                             </Pressable>
                         </View>
 
                     </View>
 
-                        <Text style={{ color: '#1a84bc', fontSize: 16, padding: 5, }}>Bill Payment </Text>
+                        <Text style={{ color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>Bill Payment </Text>
                     <View style={styles.favBox}>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={profilePageHandler} style={styles.link}>
+                            <Pressable onPress={profilePageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/topup.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                <Text style={styles.textBox}>Mobile Top Up </Text>
+                                <Text style={styles.boxText}>Mobile Top-Up </Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.link}>
+                            <Pressable onPress={depositPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/topup.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                <Text style={styles.textBox}>Global Mobile Top Up</Text>
+                                <Text style={styles.boxText}>International Airtime</Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.link}>
+                            <Pressable onPress={depositPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/data.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                <Text style={styles.textBox}>Data Bundles</Text>
+                                <Text style={styles.boxText}>Data Purchase</Text>
                             </Pressable>
                         </View>
 
@@ -133,99 +133,102 @@ function Home({ navigation }) {
                     <View style={styles.favBox}>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={profilePageHandler} style={styles.link}>
+                            <Pressable onPress={profilePageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/electric.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                <Text style={styles.textBox}>Electricity Payment </Text>
+                                <Text style={styles.boxText}>Electricity Payment </Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.link}>
+                            <Pressable onPress={depositPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/tv.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                <Text style={styles.textBox}>TV Subscription</Text>
+                                <Text style={styles.boxText}>TV Subscription</Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.link}>
+                            <Pressable onPress={depositPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/e-pin.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                <Text style={styles.textBox}>Educational E-Pins</Text>
+                                <Text style={styles.boxText}>Educational E-Pins</Text>
                             </Pressable>
                         </View>
 
                     </View>
 
 
-                <Text style={{ color: '#1a84bc', fontSize: 16, padding: 5, }}>My FondoEx Wallet </Text>
+                <Text style={{ color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>My FondoEx Wallet </Text>
 
                     <View style={styles.favBox}>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={profilePageHandler} style={styles.link}>
+                            <Pressable onPress={profilePageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/deposit.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                <Text style={styles.textBox}>Make Deposit </Text>
+                                <Text style={styles.boxText}>Make Deposit </Text>
                             </Pressable>
                         </View>
 
                             <View style={styles.serviceBox}>
-                                <Pressable onPress={profilePageHandler} style={styles.link}>
+                                <Pressable onPress={profilePageHandler} style={styles.boxLink}>
                                     <Image source={require('../assets/images/icons/internal.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                    <Text style={styles.textBox}>Internal Transfer </Text>
+                                    <Text style={styles.boxText}>Internal Transfer </Text>
                                 </Pressable>
                             </View>
 
                             <View style={styles.serviceBox}>
-                                <Pressable onPress={depositPageHandler} style={styles.link}>
+                                <Pressable onPress={depositPageHandler} style={styles.boxLink}>
                                     <Image source={require('../assets/images/icons/external.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                    <Text style={styles.textBox}>External Transfer</Text>
+                                    <Text style={styles.boxText}>External Transfer</Text>
                                 </Pressable>
                             </View>
 
                         </View>
 
-                        <Text style={{ color: '#1a84bc', fontSize: 16, padding: 5, }}>Others </Text>
+                    <Text style={{ color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>Others </Text>
 
                     <View style={styles.favBox}>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={profilePageHandler} style={styles.linkBox}>
+                            <Pressable onPress={profilePageHandler} style={styles.boxLink}>
                             <Image source={require('../assets/images/icons/market.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                <Text style={styles.textBox}>Quick Cash</Text>
+                                <Text style={styles.boxText}>Quick Cash</Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler}>
+                            <Pressable onPress={depositPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/kyc.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                <Text style={styles.textBox}>Get Verified</Text>
+                                <Text style={styles.boxText}>Get Verified</Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.linkBox}>
-                                <Image source={require('../assets/images/icons/contact.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
-                                <Text style={styles.textBox}>Support</Text>
+                            <Pressable onPress={homePageHandler} style={styles.boxLink}>
+                                <Image source={require('../assets/images/icons/rewards.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
+                                <Text style={styles.boxText}>Rewards </Text>
                             </Pressable>
                         </View>
+                        
 
                     </View>
-                    </View>
+                </View>
 
 
-                    <View style={{padding: 10, }}>
-                        <Text style={{color: '#1a84bc'}}>1-Tap Payment</Text>
-                    </View>
-                
-                </ScrollView>
-               
+                <View style={{padding: 10, }}>
+                    <Pressable onPress={() => { Linking.openURL('https://app.fondoex.com/us-index/') }}>
+                        <Text style={{color: '#595959'}}>Business Support</Text>
+                    </Pressable>
+                </View>
+            
+            </ScrollView>
 
-
-          {/*  <Stack.Navigator>
+        {/* <Stack.Navigator>
                 <Stack.Screen name="Profile" component={Profile} />
                 <Stack.Screen name="Deposit" component={Deposit} />
             </Stack.Navigator>
-*/}
+        */}
+
         </SafeAreaView>
+
         </>
     );
 }
