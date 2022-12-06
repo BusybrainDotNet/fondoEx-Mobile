@@ -101,6 +101,13 @@ const styles = StyleSheet.create({
         textAlign: 'left'
     },
 
+    titleText: {
+        color: '#2c3691',
+        fontSize: 14,
+        margin: 10,
+        textAlign: 'center'
+    },
+
     footText: {
         color: '#fff',
         fontSize: 12,
@@ -269,7 +276,16 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         flexDirection: 'row',
     },
-    
+
+    optionBox: {
+        margin: 10,
+        padding: 10, 
+        borderWidth: 0.2, 
+        borderColor: '#385E72', 
+        borderRadius: 10, 
+        flexDirection: 'row',
+    },
+
     header: {
         height: 70,
         padding: 15,

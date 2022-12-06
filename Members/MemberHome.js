@@ -24,7 +24,6 @@ function MemberHome({navigation}) {
         <SafeAreaView style={styles.appContainer}>
             <Tab.Navigator
                 screenOptions={({ route }) => ({
-                    header: () => null,
                     tabBarIcon: ({ image, focused }) => {
                     
                         if (route.name === 'Home') {
@@ -42,7 +41,7 @@ function MemberHome({navigation}) {
                     }
                 })
             }>
-                <Tab.Screen name="Home" component={Home} />
+                <Tab.Screen name="Home" options={{header: () => null}} component={Home} />
                 <Tab.Screen name="Wallet" component={Deposit} />
                 <Tab.Screen name="Settings" component={Settings} />
                 <Tab.Screen name="Profile" component={Profile} />

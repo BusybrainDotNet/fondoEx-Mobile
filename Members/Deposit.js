@@ -40,32 +40,39 @@ function Deposit({ navigation }) {
 
 
     return (
-        <SafeAreaView style={styles.appContainer}>
+        <>
+            <SafeAreaView style={styles.appContainer}>
 
-            
+                <View>
+                    <Text style={styles.titleText}>How Do You Want To Add Money Into Your Wallet?</Text>
+                </View>
+                
+                <View style={{flexDirection: 'column',}}>
+                    <View style={styles.optionBox}>
+                        <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
+                            <Image source={require('../assets/images/icons/e-pin.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
+                            <Text style={{color: '#595959', fontSize: 14, }}>Cards | USSD Code</Text>
+                            <Text style={{color: '#595959', fontSize: 18, justifyContent: 'flex-end', marginLeft: 100,}}> > </Text>
+                        </Pressable>
+                    </View>
+                    <View style={styles.optionBox}>
+                        <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
+                            <Image source={require('../assets/images/icons/deposit.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
+                            <Text style={{color: '#595959', fontSize: 14, }}>Bank Transfer | Deposit</Text>
+                            <Text style={{color: '#595959', fontSize: 18, justifyContent: 'flex-end', marginLeft: 70,}}> > </Text>
+                        </Pressable>
+                    </View>
+                    <View style={styles.optionBox}>
+                        <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
+                            <Image source={require('../assets/images/icons/profile.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
+                            <Text style={{color: '#595959', fontSize: 14, }}>My Virtual Account</Text>
+                            <Text style={{color: '#595959', fontSize: 18, justifyContent: 'flex-end', marginLeft: 100,}}> > </Text>
+                        </Pressable>
+                    </View>
+                </View>
 
-            <ImageBackground style={{maxHeight: 150,}} source={require('../assets/images/cta-bg.jpg')}>
-
-            <View style={styles.header}>
-                <Text style={styles.greetText}>Welcome Back, {"\n"}{username}</Text>
-
-                <Pressable onPress={profilePageHandler} style={{flex: 1, alignContent: 'flex-end', justifyContent: 'flex-end', }}>
-                    <Image source={require('../assets/images/profileImg.png')} resizeMode='contain' title="Profile Image" style={styles.favicon} />
-                </Pressable>
-            </View>
-
-            <View style={styles.fixToText }>
-                <Text style={styles.textWallet}>Wallet Balance:  </Text>
-                <Text style={styles.textAmount}>{bal} </Text>
-
-                <Pressable onPress={depositPageHandler} style={styles.smallBtn}>
-                    <Text style={{ color: '#000', fontSize: 14, fontWeight: '800', textAlign: 'center' }}>  Top Up </Text>
-                </Pressable>
-            </View>
-
-            </ImageBackground>
-
-        </SafeAreaView>
+            </SafeAreaView>
+        </>
     );
 }
 

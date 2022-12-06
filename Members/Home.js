@@ -96,7 +96,8 @@ function Home({ navigation }) {
                 </View>
                         
                 <View style={{padding:10, } }>
-                        <Text style={{color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>Quick Links </Text>
+
+                    <Text style={{color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>Quick Links </Text>
 
                     <View style={styles.favBox}>
 
@@ -123,7 +124,8 @@ function Home({ navigation }) {
 
                     </View>
 
-                        <Text style={{ color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>Bill Payment </Text>
+                    <Text style={{ color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>Bill Payment </Text>
+
                     <View style={styles.favBox}>
 
                         <View style={styles.serviceBox}>
@@ -175,7 +177,7 @@ function Home({ navigation }) {
                     </View>
 
 
-                <Text style={{ color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>My FondoEx Wallet </Text>
+                    <Text style={{ color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>My FondoEx Wallet </Text>
 
                     <View style={styles.favBox}>
 

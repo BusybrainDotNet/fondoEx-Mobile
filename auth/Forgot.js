@@ -54,7 +54,6 @@ function Forgot({ navigation }) {
             <Modal
                 transparent={true}
                 visible={showWarning}
-                transparent={true}
                 animationType='slide'
                 onRequestClose={() => { setShowWarning(false) }}
                 hardwareAccelerated={true}
