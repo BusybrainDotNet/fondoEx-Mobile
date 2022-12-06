@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RefreshControl } from 'react-native-gesture-handler';
-import { SafeAreaView, ScrollView, View, Text, Pressable, TouchableOpacity, Image,} from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, Pressable, TouchableOpacity, Image, ImageBackground} from 'react-native';
 import styles from '../assets/jsx/index'; 
 
 
@@ -35,11 +35,29 @@ function Home({ navigation }) {
     const profilePageHandler = () => {
         navigation.navigate('Profile');
     }
-    const settingsPageHandler = () => {
-        navigation.navigate('Settings');
-    }
     const notificationPageHandler = () => {
         navigation.navigate('Notification');
+    }
+    const referralPageHandler = () => {
+        navigation.navigate('Referrals');
+    }
+    const historyPageHandler = () => {
+        navigation.navigate('History');
+    }
+    const topupPageHandler = () => {
+        navigation.navigate('MobileTopUp');
+    }
+    const dataPageHandler = () => {
+        navigation.navigate('MobileData');
+    }
+    const electricityPageHandler = () => {
+        navigation.navigate('Electricity');
+    }
+    const televisionPageHandler = () => {
+        navigation.navigate('Television');
+    }
+    const educationPageHandler = () => {
+        navigation.navigate('Education');
     }
 
 
@@ -63,17 +81,18 @@ function Home({ navigation }) {
                         <Text style={styles.addDeposit}>+</Text>
                     </Pressable>
 
-                    <View style={{backgroundColor: '#1a84bc', width: 250, borderRadius: 10, margin: 10, }}>
-                        <Text style={{marginLeft: 5, padding: 10, fontSize: 14, color: '#fff', }}>Wallet Balance </Text>
+                    <ImageBackground style={{ maxHeight: 150, width: 250, borderRadius: 10, margin: 10, }} source={require('../assets/images/cta-bg.jpg')}>
+                        <Text style={{marginLeft: 5, padding: 10, fontSize: 16, color: '#fff', }}>Wallet Balance </Text>
 
                         <View style={styles.balanceBox}>
-                            <Text style={{padding: 5, fontSize: 18, color: '#fff', }}> {bal} </Text>
+                            <Text style={{padding: 10, fontSize: 22, color: '#fff', }}> {bal} </Text>
 
                             <Pressable onPress={depositPageHandler}>
-                                <Text style={{marginRight: 20, marginLeft: 15, padding: 15, fontSize: 12, color: '#fff', }}>+ Make Deposit</Text>
+                                <Text style={{marginRight: 10, marginLeft: 10, padding: 15, fontSize: 14, color: '#fff', }}>+ Make Deposit</Text>
                             </Pressable>
                         </View>
-                    </View>
+                    </ImageBackground>
+                        
                 </View>
                         
                 <View style={{padding:10, } }>
@@ -82,21 +101,21 @@ function Home({ navigation }) {
                     <View style={styles.favBox}>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={homePageHandler} style={styles.boxLink}>
+                            <Pressable onPress={referralPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/internal.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText}>Referrals </Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={settingsPageHandler} style={styles.boxLink}>
+                            <Pressable onPress={historyPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/history.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText}> Transactions</Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.boxLink}>
+                            <Pressable onPress={topupPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/topup.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText} >Mobile Top-Up</Text>
                             </Pressable>
@@ -108,21 +127,21 @@ function Home({ navigation }) {
                     <View style={styles.favBox}>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={profilePageHandler} style={styles.boxLink}>
+                            <Pressable onPress={topupPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/topup.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText}>Mobile Top-Up </Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.boxLink}>
+                            <Pressable onPress={topupPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/topup.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText}>International Airtime</Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.boxLink}>
+                            <Pressable onPress={dataPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/data.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText}>Data Purchase</Text>
                             </Pressable>
@@ -133,21 +152,21 @@ function Home({ navigation }) {
                     <View style={styles.favBox}>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={profilePageHandler} style={styles.boxLink}>
+                            <Pressable onPress={electricityPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/electric.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText}>Electricity Payment </Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.boxLink}>
+                            <Pressable onPress={televisionPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/tv.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText}>TV Subscription</Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.boxLink}>
+                            <Pressable onPress={educationPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/e-pin.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText}>Educational E-Pins</Text>
                             </Pressable>

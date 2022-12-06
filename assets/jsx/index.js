@@ -349,12 +349,12 @@ const styles = StyleSheet.create({
     },
     
     addDeposit: {
-        marginTop: 15,
-        marginBottom: 10, 
+        marginTop: 25,
+        marginBottom: 5, 
         marginRight: 20, 
         marginLeft: 20, 
-        padding: 8, 
-        fontSize: 50, 
+        padding: 5, 
+        fontSize: 40, 
         color: '#1a84bc',
         borderWidth: 1,
         borderColor: '#1a84bc', 
