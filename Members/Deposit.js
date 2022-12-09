@@ -52,21 +52,21 @@ function Deposit({ navigation }) {
                         <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
                             <Image source={require('../assets/images/icons/e-pin.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
                             <Text style={{color: '#595959', fontSize: 14, }}>Cards | USSD Code</Text>
-                            <Text style={{color: '#595959', fontSize: 18, justifyContent: 'flex-end', marginLeft: 100,}}> > </Text>
+                            <Text style={{color: '#595959', fontSize: 18, justifyContent: 'flex-end', marginLeft: 100,}}>  </Text>
                         </Pressable>
                     </View>
                     <View style={styles.optionBox}>
                         <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
                             <Image source={require('../assets/images/icons/deposit.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
                             <Text style={{color: '#595959', fontSize: 14, }}>Bank Transfer | Deposit</Text>
-                            <Text style={{color: '#595959', fontSize: 18, justifyContent: 'flex-end', marginLeft: 70,}}> > </Text>
+                            <Text style={{color: '#595959', fontSize: 18, justifyContent: 'flex-end', marginLeft: 70,}}>  </Text>
                         </Pressable>
                     </View>
                     <View style={styles.optionBox}>
                         <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
                             <Image source={require('../assets/images/icons/profile.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
                             <Text style={{color: '#595959', fontSize: 14, }}>My Virtual Account</Text>
-                            <Text style={{color: '#595959', fontSize: 18, justifyContent: 'flex-end', marginLeft: 100,}}> > </Text>
+                            <Text style={{color: '#595959', fontSize: 18, justifyContent: 'flex-end', marginLeft: 100,}}>  </Text>
                         </Pressable>
                     </View>
                 </View>

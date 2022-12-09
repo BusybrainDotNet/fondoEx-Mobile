@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { RefreshControl } from 'react-native-gesture-handler';
 import { SafeAreaView, ScrollView, View, Text, Pressable, TouchableOpacity, Image, ImageBackground} from 'react-native';
 import styles from '../assets/jsx/index'; 
+import Slider from '../Slider'; 
 
 
 //Declare Bottom Tab As Tab
@@ -81,14 +82,14 @@ function Home({ navigation }) {
                         <Text style={styles.addDeposit}>+</Text>
                     </Pressable>
 
-                    <ImageBackground style={{ maxHeight: 150, width: 250, borderRadius: 10, margin: 10, }} source={require('../assets/images/cta-bg.jpg')}>
-                        <Text style={{marginLeft: 5, padding: 10, fontSize: 16, color: '#fff', }}>Wallet Balance </Text>
+                    <ImageBackground style={{maxHeight: '100%', width: '90%', borderRadius: 10, margin: 10, }} source={require('../assets/images/cta-bg.jpg')}>
+                        <Text style={{marginLeft: 5, padding: 10, fontSize: 16, color: '#fff', fontWeight: 'bold', }}>Wallet Balance </Text>
 
                         <View style={styles.balanceBox}>
-                            <Text style={{padding: 10, fontSize: 22, color: '#fff', }}> {bal} </Text>
+                            <Text style={{padding: 10, fontSize: 22, fontWeight: 'bold', color: '#fff', }}> {bal} </Text>
 
                             <Pressable onPress={depositPageHandler}>
-                                <Text style={{marginRight: 10, marginLeft: 10, padding: 15, fontSize: 14, color: '#fff', }}>+ Make Deposit</Text>
+                                <Text style={{marginRight: 50, marginLeft: 10, padding: 15, fontSize: 14, fontWeight: 'bold', color: '#000', }}>+ Make Deposit</Text>
                             </Pressable>
                         </View>
                     </ImageBackground>
@@ -124,6 +125,7 @@ function Home({ navigation }) {
 
                     </View>
 
+                    <Slider />
                     <Text style={{ color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>Bill Payment </Text>
 
                     <View style={styles.favBox}>
@@ -204,7 +206,7 @@ function Home({ navigation }) {
 
                         </View>
 
-                    <Text style={{ color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>Others </Text>
+                    <Text style={{ color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>Business Tools </Text>
 
                     <View style={styles.favBox}>
 
@@ -234,19 +236,13 @@ function Home({ navigation }) {
                 </View>
 
 
-                <View style={{padding: 10, }}>
+                {/* <View style={{padding: 10, }}>
                     <Pressable onPress={() => { Linking.openURL('https://app.fondoex.com/us-index/') }}>
-                        <Text style={{color: '#595959'}}>Business Support</Text>
+                        <Text style={{color: '#595959'}}>Business Tools</Text>
                     </Pressable>
-                </View>
+                </View> */}
             
             </ScrollView>
-
-        {/* <Stack.Navigator>
-                <Stack.Screen name="Profile" component={Profile} />
-                <Stack.Screen name="Deposit" component={Deposit} />
-            </Stack.Navigator>
-        */}
 
         </SafeAreaView>
 

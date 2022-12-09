@@ -98,7 +98,6 @@ function Forgot({ navigation }) {
                         </Pressable>
 
                     </View>
-                    <Text style={styles.footText}>Your Number One Utility Payment Platform In Africa! </Text>
                 </View>
                 </ScrollView>
             </ImageBackground>

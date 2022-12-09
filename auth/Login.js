@@ -130,7 +130,6 @@ Handle FOrm Submittion
                             <Text style={{ color: '#1a84bc', textAlign: 'center', marginTop: 2 }}>Not Yet A member? Register</Text>
                         </Pressable>
                     </View>
-                    <Text style={styles.footText}>Your Number One Utility Payment Platform In Africa! </Text>
                 </View>
                 </ScrollView>
             </ImageBackground>

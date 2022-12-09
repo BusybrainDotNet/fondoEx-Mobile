@@ -108,14 +108,6 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
 
-    footText: {
-        color: '#fff',
-        fontSize: 12,
-        justifyContent: 'center',
-        alignItems: 'flex-end',
-        textAlign: 'center',
-    },
-
     footMenu: {
         color: '#fff',
         fontSize: 12,
@@ -260,7 +252,7 @@ const styles = StyleSheet.create({
     boxText: {
         color: '#595959',
         fontSize: 8,
-        fontWeight: 'bolder',
+        fontWeight: 'bold',
     },
 
     boxLink: {
