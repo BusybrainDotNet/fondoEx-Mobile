@@ -30,7 +30,7 @@ function Home({ navigation }) {
                 <View style={styles.imageContainer}>
                     <Image source={require('./assets/images/logo.png')} title="Splash Image" style={styles.image} />
 
-                    <Pressable onPress={registerHandler} style={({ pressed }) => ({ backgroundColor: pressed ? '#2c3691' : '#1a84bc', margin: 35, padding: 15, borderRadius: 5 })}>
+                    <Pressable onPress={registerHandler} style={({ pressed }) => ({ backgroundColor: pressed ? '#2c3691' : '#1a84bc', margin: '15%', padding: 15, borderRadius: 5 })}>
                         <Text style={{ color: '#fff' }}>LET'S GET YOU STARTED</Text>
                     </Pressable>
                     <Pressable onPress={loginHandler} style={styles.link}>

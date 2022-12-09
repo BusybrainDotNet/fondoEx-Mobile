@@ -14,7 +14,7 @@ function Deposit({ navigation }) {
     * Define Page Navigations
     */  
     const homePageHandler = () => {
-    navigation.navigate('MemberHome');
+        navigation.navigate('MemberHome');
     }
     const depositPageHandler = () => {
         navigation.navigate('Deposit');
@@ -27,7 +27,7 @@ function Deposit({ navigation }) {
     }
     const notificationPageHandler = () => {
     navigation.navigate('Notification');
-}
+    }
 
 
 
@@ -43,7 +43,7 @@ function Deposit({ navigation }) {
         <>
             <SafeAreaView style={styles.appContainer}>
 
-                <View>
+                <View style={{marginTop: '5%', }}>
                     <Text style={styles.titleText}>How Do You Want To Add Money Into Your Wallet?</Text>
                 </View>
                 
@@ -70,6 +70,29 @@ function Deposit({ navigation }) {
                         </Pressable>
                     </View>
                 </View>
+                
+
+                <View style={{marginTop: '5%', }}>
+                    <Text style={styles.titleText}>Send Money To Your Loved Ones</Text>
+                </View>
+                
+                <View style={{flexDirection: 'column',}}>
+                    <View style={styles.optionBox}>
+                        <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
+                            <Image source={require('../assets/images/icons/e-pin.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
+                            <Text style={{color: '#595959', fontSize: 14, }}>Internal Transfer</Text>
+                            <Text style={{color: '#595959', fontSize: 18, justifyContent: 'flex-end', marginLeft: 100,}}>  </Text>
+                        </Pressable>
+                    </View>
+                    <View style={styles.optionBox}>
+                        <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
+                            <Image source={require('../assets/images/icons/deposit.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
+                            <Text style={{color: '#595959', fontSize: 14, }}>External Transfer</Text>
+                            <Text style={{color: '#595959', fontSize: 18, justifyContent: 'flex-end', marginLeft: 70,}}>  </Text>
+                        </Pressable>
+                    </View>
+                </View>
+
 
             </SafeAreaView>
         </>

@@ -8,80 +8,53 @@ import styles from '../assets/jsx/index';
 */
 function Settings({ navigation }) {
 
-    const loginHandler = () => {
-        navigation.navigate('Login');
-    }
-    const memberHomeHandler = () => {
+    const homePageHandler = () => {
         navigation.navigate('MemberHome');
     }
+    const depositPageHandler = () => {
+        navigation.navigate('Deposit');
+    }
+    const profilePageHandler = () => {
+        navigation.navigate('Profile');
+    }
+    const settingsPageHandler = () => {
+        navigation.navigate('Settings');
+    }
+    const notificationPageHandler = () => {
+    navigation.navigate('Notification');
+    }
+
+
     return (
 
         <SafeAreaView style={styles.appContainer}>
-
-            <ImageBackground style={styles.appContainer} source={require('../assets/images/decor.jpg')}>
-
-                <ScrollView style={styles.appContainer}>
-
-                    <View style={{ padding: 10, }}>
-                        <Text style={{ color: '#385E72', fontSize: 16, padding: 5, }}>My Settings </Text>
-
-                        <View style={styles.favBox}>
-
-                            <View style={styles.serviceBox}>
-                                <Pressable onPress={memberHomeHandler} style={styles.link}>
-                                    <Text style={styles.textBox}>Rewards &  Referrals </Text>
-                                </Pressable>
-                            </View>
-
-                            <View style={styles.serviceBox}>
-                                <Pressable onPress={loginHandler} style={styles.link}>
-                                    <Text style={styles.textBox}>Transaction History</Text>
-                                </Pressable>
-                            </View>
-
-                            <View style={styles.serviceBox}>
-                                <Pressable onPress={loginHandler} style={styles.link}>
-                                    <Text style={styles.textBox} >Mobile Top Up</Text>
-                                </Pressable>
-                            </View>
-
-                        </View>
-
-                        
-
-                        <Text style={{ color: '#fff', fontSize: 16, padding: 5, }}>Others </Text>
-
-                        <View style={styles.favBox}>
-
-                            <View style={styles.serviceBox}>
-                                <Pressable onPress={memberHomeHandler} style={styles.link}>
-                                    <Text style={styles.textBox}>Quick Cash & Loans </Text>
-                                </Pressable>
-                            </View>
-
-                            <View style={styles.serviceBox}>
-                                <Pressable onPress={loginHandler} style={styles.link}>
-                                    <Text style={styles.textBox}>KYC</Text>
-                                </Pressable>
-                            </View>
-
-                            <View style={styles.serviceBox}>
-                                <Pressable onPress={loginHandler} style={styles.link}>
-                                    <Text style={styles.textBox}>Support</Text>
-                                </Pressable>
-                            </View>
-
-                        </View>
+            
+            <View style={{marginTop: '5%', }}>
+                    <Text style={styles.titleText}>Personalize Your Fondo Expreso Account</Text>
+                </View>
+                
+                <View style={{flexDirection: 'column',}}>
+                    <View style={styles.optionBox}>
+                        <Pressable onPress={homePageHandler} style={{flexDirection: 'row', flex: 1, }}>
+                            <Image source={require('../assets/images/icons/profile.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
+                            <Text style={{color: '#595959', fontSize: 14,flexDirection: 'row',}}>Profile Settings</Text>
+                            <Text style={{color: '#595959', fontSize: 10,}}>Edit Profile Details</Text>
+                        </Pressable>
                     </View>
-
-
-                    <View style={{padding: 10, }}>
-                        <Text style={{color: '#fff'}}>1-Tap Payment</Text>
+                    <View style={styles.optionBox}>
+                        <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
+                            <Image source={require('../assets/images/icons/deposit.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
+                            <Text style={{color: '#595959', fontSize: 14, }}>Set Pin</Text>
+                            <Text style={{color: '#595959', fontSize: 10,}}>  </Text>
+                        </Pressable>
                     </View>
-
-                </ScrollView>
-
-            </ImageBackground>
+                    <View style={styles.optionBox}>
+                        <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
+                            <Image source={require('../assets/images/icons/profile.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
+                            <Text style={{color: '#595959', fontSize: 14, }}>Update Password</Text>
+                        </Pressable>
+                    </View>
+                </View>
 
         </SafeAreaView>
     );

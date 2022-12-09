@@ -26,10 +26,10 @@ const styles = StyleSheet.create({
 
     formContainer: {
         flex: 1,
-        marginTop: 10,
-        paddingTop: 20,
-        padding: 15,
-        margin: 15,
+        marginTop: '5%',
+        paddingTop: '5%',
+        padding: '5%',
+        margin: '8%',
         borderWidth: 1,
         borderColor: '#1a84bc',
         borderRadius: 10,
