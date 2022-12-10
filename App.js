@@ -8,7 +8,7 @@ import Forgot from './auth/Forgot';
 import Register from './auth/Register';
 import MemberHome from './Members/MemberHome';
 import Profile from './Members/Profile';
-import Deposit from './Members/Deposit';
+import Wallet from './Members/Wallet';
 import Settings from './Members/Settings';
 
 
@@ -32,7 +32,7 @@ const App = () => {
                     <Stack.Screen name="InfoPage" component={InfoPage} />
                     <Stack.Screen name="MemberHome" component={MemberHome} />
                     <Stack.Screen name="Profile" component={Profile} />
-                    <Stack.Screen name="Deposit" component={Deposit} />
+                    <Stack.Screen name="Wallet" component={Wallet} />
                     <Stack.Screen name="Settings" component={Settings} />
                 </Stack.Navigator>
 

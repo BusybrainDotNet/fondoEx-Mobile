@@ -37,32 +37,19 @@ function Notification({ navigation }) {
 
 
     return (
-        <SafeAreaView style={styles.appContainer}>
+        <>
+            <SafeAreaView style={styles.appContainer}>
 
-            
-
-            <ImageBackground style={{maxHeight: 150,}} source={require('../assets/images/cta-bg.jpg')}>
-
-            <View style={styles.header}>
-                <Text style={styles.greetText}>Welcome Back, {"\n"}{username}</Text>
-
-                <Pressable onPress={profilePageHandler} style={{flex: 1, alignContent: 'flex-end', justifyContent: 'flex-end', }}>
+                <ScrollView style={styles.appContainer}>
                     <Image source={require('../assets/images/profileImg.png')} resizeMode='contain' title="Profile Image" style={styles.favicon} />
-                </Pressable>
-            </View>
+                    
+                    <View style={styles.fixToText }>
+                    
+                    </View>
+                </ScrollView>
 
-            <View style={styles.fixToText }>
-                <Text style={styles.textWallet}>Wallet Balance:  </Text>
-                <Text style={styles.textAmount}>{bal} </Text>
-
-                <Pressable onPress={depositPageHandler} style={styles.smallBtn}>
-                    <Text style={{ color: '#000', fontSize: 14, fontWeight: '800', textAlign: 'center' }}>  Top Up </Text>
-                </Pressable>
-            </View>
-
-            </ImageBackground>
-
-        </SafeAreaView>
+            </SafeAreaView>
+        </>
     );
 }
 

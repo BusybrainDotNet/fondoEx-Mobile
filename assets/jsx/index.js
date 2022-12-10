@@ -355,6 +355,20 @@ const styles = StyleSheet.create({
         maxHeight: 40,
         padding: 5
     },
+
+    faviconProfile: {
+        radius: '50%',
+        borderWidth: 2,
+        borderColor: '#1a84bc',
+        maxWidth: 100,
+        maxHeight: 100,
+        padding: 10,
+        marginTop: '5%',
+        marginLeft: '35%',
+        justifyContent: 'center', 
+        alignContent: 'center',
+        borderRadius: 100/2,
+    },
     
     addDeposit: {
         marginTop: 25,

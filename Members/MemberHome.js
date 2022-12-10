@@ -3,7 +3,7 @@ import { SafeAreaView,  Image, } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import styles from '../assets/jsx/index';
 import Home from './Home';
-import Deposit from './Deposit';
+import Wallet from './Wallet';
 import Profile from './Profile';
 import Settings from './Settings';
 
@@ -42,7 +42,7 @@ function MemberHome({navigation}) {
                 })
             }>
                 <Tab.Screen name="Home" options={{header: () => null}} component={Home} />
-                <Tab.Screen name="Wallet" component={Deposit} />
+                <Tab.Screen name="Wallet" component={Wallet} />
                 <Tab.Screen name="Settings" component={Settings} />
                 <Tab.Screen name="Profile" component={Profile} />
             </Tab.Navigator>

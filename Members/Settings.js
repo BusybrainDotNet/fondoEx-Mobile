@@ -27,7 +27,8 @@ function Settings({ navigation }) {
 
     return (
 
-        <SafeAreaView style={styles.appContainer}>
+        <>
+            <SafeAreaView style={styles.appContainer}>
             
             <View style={{marginTop: '5%', }}>
                     <Text style={styles.titleText}>Personalize Your Fondo Expreso Account</Text>
@@ -56,7 +57,8 @@ function Settings({ navigation }) {
                     </View>
                 </View>
 
-        </SafeAreaView>
+            </SafeAreaView>
+        </>
     );
 }
 
