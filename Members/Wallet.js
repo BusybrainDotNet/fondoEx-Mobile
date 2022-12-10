@@ -49,7 +49,7 @@ function Wallet({ navigation }) {
                         <Text style={styles.titleText}>How Do You Want To Add Money Into Your Wallet?</Text>
                     </View>
 
-                    <View style={{flexDirection: 'column',}}>
+                    <View>
                         <View style={styles.optionBox}>
                             <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
                                 <Image source={require('../assets/images/icons/e-pin.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>

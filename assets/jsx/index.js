@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
    favBox: {
        flexDirection: 'row',
        justifyContent: 'space-around',
-       alignContent: 'center',
+       alignItems: 'center',
     },
 
     serviceBox: {
@@ -239,7 +239,7 @@ const styles = StyleSheet.create({
         margin: 10,
         padding: 0,
         justifyContent: 'space-around',
-        alignContent: 'center',
+        alignItems: 'center',
     },
 
     boxImage: {
@@ -366,7 +366,7 @@ const styles = StyleSheet.create({
         marginTop: '5%',
         marginLeft: '35%',
         justifyContent: 'center', 
-        alignContent: 'center',
+        alignItems: 'center',
         borderRadius: 100/2,
     },
     

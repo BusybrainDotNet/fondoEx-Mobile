@@ -9,6 +9,7 @@ import Settings from './Settings';
 
 
 
+
 //Declare Bottom Tab As Tab
 const Tab = createBottomTabNavigator();
 //const Stack = createNativeStackNavigator();
@@ -27,15 +28,19 @@ function MemberHome({navigation}) {
                     tabBarIcon: ({ image, focused }) => {
                     
                         if (route.name === 'Home') {
+                            
                             return <Image source={require('../assets/images/icons/home.png')} resizeMode='contain' style={{width: 25, height: 30, }}></Image>
                             
                         } else if (route.name === 'Wallet') {
+                            
                             return <Image source={require('../assets/images/icons/wallet.png')} resizeMode='contain' style={{width: 25, height: 30, }}></Image>
 
                         } else if (route.name === 'Settings') {
+                            
                             return <Image source={require('../assets/images/icons/settings.png')} resizeMode='contain' style={{width: 25, height: 30, }}></Image>
 
                         } else if (route.name === 'Profile') {
+                            
                             return <Image source={require('../assets/images/icons/profile.png')} resizeMode='contain' style={{width: 25, height: 30, }}></Image>
                         } 
                     }

@@ -6,7 +6,7 @@ import styles from '../assets/jsx/index';
 /*
 * Member Auth Home Screen Or Home Page For Members
 */
-function Settings({ navigation }) {
+function Referral({ navigation }) {
 
     const homePageHandler = () => {
         navigation.navigate('MemberHome');
@@ -31,7 +31,7 @@ function Settings({ navigation }) {
             <SafeAreaView style={styles.appContainer}>
             
                 <View style={{marginTop: '5%', }}>
-                    <Text style={styles.titleText}>Personalize Your Fondo Expreso Account</Text>
+                    <Text style={styles.titleText}>Refer Your Friends To Enjoy More Access</Text>
                 </View>
                 
                 <View style={{flexDirection: 'column',}}>
@@ -70,4 +70,4 @@ function Settings({ navigation }) {
 /*
 * Export Of The Main App To Screens
 */
-export default Settings;
+export default Referral;

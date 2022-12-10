@@ -31,6 +31,9 @@ function Profile({ navigation }) {
                     <View>
                         <Text style={styles.titleText}> {username} </Text>
                         
+                        <Pressable onPress={depositPageHandler} style={({ pressed }) => ({ backgroundColor: pressed ? '#2c3691' : '#1a84bc', padding: 15, marginTop: '10%', borderRadius: 5, textAlign: 'center', maxWidth: '50%', marginLeft: '25%',})}>
+                            <Text style={{ color: '#fff', textAlign: 'center' }}>Edit Profile</Text>
+                        </Pressable>
                     </View>
 
                 </ScrollView>

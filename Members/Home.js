@@ -39,9 +39,6 @@ function Home({ navigation }) {
     const notificationPageHandler = () => {
         navigation.navigate('Notification');
     }
-    const referralPageHandler = () => {
-        navigation.navigate('Referrals');
-    }
     const historyPageHandler = () => {
         navigation.navigate('History');
     }
@@ -59,6 +56,9 @@ function Home({ navigation }) {
     }
     const educationPageHandler = () => {
         navigation.navigate('Education');
+    }
+    const referralPageHandler = () => {
+        navigation.navigate('Referral');
     }
 
 
