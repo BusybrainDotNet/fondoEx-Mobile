@@ -36,7 +36,7 @@ function Deposit({ navigation }) {
                 
                 <View style={{flexDirection: 'column',}}>
                     <View style={styles.optionBox}>
-                        <Pressable onPress={homePageHandler} style={{flexDirection: 'row', flex: 1, }}>
+                        <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
                             <Image source={require('../assets/images/icons/profile.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
                             <Text style={{color: '#595959', fontSize: 14,flexDirection: 'row',}}>Profile Settings</Text>
                             <Text style={{color: '#595959', fontSize: 10,}}>Edit Profile Details</Text>

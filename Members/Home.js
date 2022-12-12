@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { RefreshControl } from 'react-native-gesture-handler';
 import { SafeAreaView, ScrollView, View, Text, Pressable, TouchableOpacity, Image, ImageBackground} from 'react-native';
 import styles from '../assets/jsx/index'; 
-//import Slider from '../Slider'; 
+// import Carousel from 'react-native-snap-carousel';
+// import { SliderImages } from './SliderImages';
+// import BannerSlider from '../components/BannerSlider';
+// import windowWidth from '../utility/Dimensions';
 
 
-//Declare Bottom Tab As Tab
-//const Stack = createNativeStackNavigator();
 
 
 /*
@@ -14,8 +15,15 @@ import styles from '../assets/jsx/index';
 */
 function Home({ navigation }) {
 
+
+
+/*
+* State Declaration For Application
+*/
     const [username, setUsername] = useState('Tom Kim');
     const [bal, setBal] = useState('#25,000');
+
+
 /*
 * Refresh Control For Application
 */
@@ -23,6 +31,16 @@ function Home({ navigation }) {
     // const onRefresh = () => {
     //     setRefreshing(true);
     // }
+
+/*
+* Slide Banner Control For Application
+*/
+    // const renderBanner = ({item, index}) => {
+    //     return <BannerSlider data={item} />;
+    //   };
+
+
+
 
 /*
 * Define Route Handlers
@@ -125,6 +143,16 @@ function Home({ navigation }) {
 
                     </View>
 
+                    {/* <Carousel
+                        ref={c => {
+                            this._carousel = c;
+                        }}
+                        data={SliderImages}
+                        renderItem={renderBanner}
+                        sliderWidth={windowWidth - 40}
+                        itemWidth={300}
+                        loop={true}
+                    /> */}
                    
                     <Text style={{ color: '#595959', fontSize: 12, padding: 5, marginTop: 20,}}>Bill Payment </Text>
 
@@ -234,13 +262,7 @@ function Home({ navigation }) {
 
                     </View>
                 </View>
-
-
-                {/* <View style={{padding: 10, }}>
-                    <Pressable onPress={() => { Linking.openURL('https://app.fondoex.com/us-index/') }}>
-                        <Text style={{color: '#595959'}}>Business Tools</Text>
-                    </Pressable>
-                </View> */}
+                
             
             </ScrollView>
 

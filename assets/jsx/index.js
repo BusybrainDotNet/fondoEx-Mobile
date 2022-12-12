@@ -105,7 +105,8 @@ const styles = StyleSheet.create({
         color: '#2c3691',
         fontSize: 14,
         margin: 10,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontWeight: 'bold',
     },
 
     footMenu: {
