@@ -17,7 +17,7 @@ function Profile({ navigation }) {
         navigation.navigate('Deposit');
     }
     const editProfileHandler = () => {
-        navigation.navigate('EditProfile');
+        navigation.navigate('Edit Profile');
     }
 
 

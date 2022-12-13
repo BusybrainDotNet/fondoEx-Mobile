@@ -14,6 +14,8 @@ import Settings from './Members/Settings';
 import Referral from './Members/Referral';
 import Deposit from './Members/Deposit';
 import Notification from './Members/Notification';
+import UpdatePassword from './Members/UpdatePassword';
+import UpdatePin from './Members/UpdatePin';
 
 /*Create Stack For Navigations*/
 const Stack = createNativeStackNavigator();
@@ -35,7 +37,9 @@ const App = () => {
                     <Stack.Screen options={{header: () => null}} name="InfoPage" component={InfoPage} />
                     <Stack.Screen options={{header: () => null}} name="MemberHome" component={MemberHome} />
                     <Stack.Screen name="Profile" component={Profile} />
-                    <Stack.Screen name="EditProfile" component={EditProfile} />
+                    <Stack.Screen name="Edit Profile" component={EditProfile} />
+                    <Stack.Screen name="Update Password" component={UpdatePassword} />
+                    <Stack.Screen name="Update Pin" component={UpdatePin} />
                     <Stack.Screen name="Wallet" component={Wallet} />
                     <Stack.Screen name="Settings" component={Settings} />
                     <Stack.Screen name="Referral" component={Referral} />

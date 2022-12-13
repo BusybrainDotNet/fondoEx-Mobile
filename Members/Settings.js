@@ -8,23 +8,14 @@ import styles from '../assets/jsx/index';
 */
 function Settings({ navigation }) {
 
-    const homePageHandler = () => {
-        navigation.navigate('MemberHome');
-    }
-    const depositPageHandler = () => {
-        navigation.navigate('Deposit');
-    }
-    const profilePageHandler = () => {
-        navigation.navigate('Profile');
-    }
     const editProfilePageHandler = () => {
-        navigation.navigate('EditProfile');
+        navigation.navigate('Edit Profile');
     }
-    const settingsPageHandler = () => {
-        navigation.navigate('Settings');
+    const updatePasswordPageHandler = () => {
+        navigation.navigate('Update Password');
     }
-    const notificationPageHandler = () => {
-    navigation.navigate('Notification');
+    const updatePinPageHandler = () => {
+        navigation.navigate('Update Pin');
     }
 
 
@@ -48,7 +39,7 @@ function Settings({ navigation }) {
                         </Pressable>
                     </View>
                     <View style={styles.optionBox}>
-                        <Pressable onPress={homePageHandler}>
+                        <Pressable onPress={updatePinPageHandler}>
                             <View style={{flexDirection: 'row', }}>
                                 <Image source={require('../assets/images/icons/deposit.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
                                 <Text style={{color: '#2c3691', fontSize: 14, fontWeight: 'bold'}}>Transaction Pin</Text>
@@ -57,7 +48,7 @@ function Settings({ navigation }) {
                         </Pressable>
                     </View>
                     <View style={styles.optionBox}>
-                        <Pressable onPress={homePageHandler}>
+                        <Pressable onPress={updatePasswordPageHandler}>
                             <View style={{flexDirection: 'row', }}>
                                 <Image source={require('../assets/images/icons/profile.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
                                 <Text style={{color: '#2c3691', fontSize: 14, fontWeight: 'bold'}}>Update Password</Text>
