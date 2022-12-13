@@ -382,7 +382,38 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#1a84bc', 
         borderRadius: 100/2,
-    }
+    },
+
+    innerFormContainer: {
+        flex: 1,
+        marginTop: '5%',
+        paddingTop: '5%',
+        padding: '1%',
+        margin: '8%',
+        backgroundColor: '#fff',
+        shadowColor: '#fff',
+    },
+
+    innerLabel: {
+        color: '#595959',
+        fontSize: 12,
+        marginTop: 20,
+        fontFamily: 'open sans'
+    },
+
+    
+
+    innerTextInput: {
+        color: '#595959',
+        fontSize: 14,
+        padding: 3,
+        marginTop: 5,
+        borderWidth: 1,
+        borderRadius: 10,
+        borderColor: '#595959',
+        backgroundColor: '#fff',
+
+    },
 
 });
 

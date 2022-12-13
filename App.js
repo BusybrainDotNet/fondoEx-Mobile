@@ -8,6 +8,7 @@ import Forgot from './auth/Forgot';
 import Register from './auth/Register';
 import MemberHome from './Members/MemberHome';
 import Profile from './Members/Profile';
+import EditProfile from './Members/EditProfile';
 import Wallet from './Members/Wallet';
 import Settings from './Members/Settings';
 import Referral from './Members/Referral';
@@ -34,6 +35,7 @@ const App = () => {
                     <Stack.Screen options={{header: () => null}} name="InfoPage" component={InfoPage} />
                     <Stack.Screen options={{header: () => null}} name="MemberHome" component={MemberHome} />
                     <Stack.Screen name="Profile" component={Profile} />
+                    <Stack.Screen name="EditProfile" component={EditProfile} />
                     <Stack.Screen name="Wallet" component={Wallet} />
                     <Stack.Screen name="Settings" component={Settings} />
                     <Stack.Screen name="Referral" component={Referral} />

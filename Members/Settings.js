@@ -17,6 +17,9 @@ function Settings({ navigation }) {
     const profilePageHandler = () => {
         navigation.navigate('Profile');
     }
+    const editProfilePageHandler = () => {
+        navigation.navigate('EditProfile');
+    }
     const settingsPageHandler = () => {
         navigation.navigate('Settings');
     }
@@ -36,7 +39,7 @@ function Settings({ navigation }) {
                 
                 <View style={{flexDirection: 'column',}}>
                     <View style={styles.optionBox}>
-                        <Pressable onPress={homePageHandler}>
+                        <Pressable onPress={editProfilePageHandler}>
                             <View style={{flexDirection: 'row', }}>
                                 <Image source={require('../assets/images/icons/profile.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
                                 <Text style={{color: '#2c3691', fontSize: 14, fontWeight: 'bold'}}>Profile Settings</Text>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, View, Text, Pressable, Image, } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, TextInput, Pressable, Image, } from 'react-native';
 import styles from '../assets/jsx/index';
 
 
@@ -29,33 +29,38 @@ function Deposit({ navigation }) {
 
         <>
             <SafeAreaView style={styles.appContainer}>
-            
-                <View style={{marginTop: '5%', }}>
-                    <Text style={styles.titleText}>Refer Your Friends To Enjoy More Access</Text>
-                </View>
+
+                <ScrollView style={styles.appContainer}>
                 
-                <View style={{flexDirection: 'column',}}>
-                    <View style={styles.optionBox}>
-                        <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
-                            <Image source={require('../assets/images/icons/profile.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
-                            <Text style={{color: '#595959', fontSize: 14,flexDirection: 'row',}}>Profile Settings</Text>
-                            <Text style={{color: '#595959', fontSize: 10,}}>Edit Profile Details</Text>
-                        </Pressable>
+                    <View style={{marginTop: '5%', }}>
+                        <Text style={styles.titleText}>Refer Your Friends To Enjoy More Access</Text>
                     </View>
-                    <View style={styles.optionBox}>
-                        <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
-                            <Image source={require('../assets/images/icons/deposit.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
-                            <Text style={{color: '#595959', fontSize: 14, }}>Set Pin</Text>
-                            <Text style={{color: '#595959', fontSize: 10,}}>  </Text>
-                        </Pressable>
+                    
+                    <View>
+                        <View style={styles.optionBox}>
+                            <Pressable onPress={homePageHandler}>
+                                <View style={{flexDirection: 'row', }}>
+                                    <Image source={require('../assets/images/icons/e-pin.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
+                                    <Text style={{color: '#2c3691', fontSize: 14, fontWeight: 'bold'}}>Cards | USSD Code</Text>
+                                </View>
+                                <Text style={{color: '#595959', fontSize: 10, marginLeft: '20%', paddingTop: 3,}}>Pay By Transfer Code Or Card </Text>
+                            </Pressable>
+                        </View>
+                        <View style={styles.optionBox}>
+                            <Pressable onPress={homePageHandler}>
+                                <View style={{flexDirection: 'row', }}>
+                                    <Image source={require('../assets/images/icons/deposit.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
+                                    <Text style={{color: '#2c3691', fontSize: 14, fontWeight: 'bold'}}>Bank Transfer | Deposit</Text>
+                                </View>
+                                <Text style={{color: '#595959', fontSize: 10, marginLeft: '20%', paddingTop: 3,}}>Pay By Deposit Or Transfer</Text>
+                            </Pressable>
+                        </View>
                     </View>
-                    <View style={styles.optionBox}>
-                        <Pressable onPress={homePageHandler} style={{flexDirection: 'row',}}>
-                            <Image source={require('../assets/images/icons/profile.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
-                            <Text style={{color: '#595959', fontSize: 14, }}>Update Password</Text>
-                        </Pressable>
-                    </View>
-                </View>
+
+
+                    
+
+                </ScrollView>
 
             </SafeAreaView>
         </>
