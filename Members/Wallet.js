@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, View, Text, StyleSheet, TextInput, Pressable, TouchableOpacity, Image, ImageBackground } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, Modal, TextInput, Pressable, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import styles from '../assets/jsx/index';
 
 
@@ -10,23 +10,28 @@ import styles from '../assets/jsx/index';
 function Wallet({ navigation }) {
 
     
+
+    
+    const [showBankTransferDetails, setBankTransferDetails] = useState(false);
+
+
     /*
     * Define Page Navigations
     */  
-    const homePageHandler = () => {
-        navigation.navigate('MemberHome');
+    const cardTransferHandler = () => {
+        navigation.navigate('Make Deposit');
     }
-    const depositPageHandler = () => {
-        navigation.navigate('Deposit');
+    // const virtualTransferHandler = () => {
+    //     navigation.navigate('Virtual Transfer');
+    // }
+    const bankTransferHandler = () => {
+        setBankTransferDetails(true);;
     }
-    const profilePageHandler = () => {
-        navigation.navigate('Profile');
+    const internalTransferHandler = () => {
+        navigation.navigate('Internal Transfer');
     }
-    const settingsPageHandler = () => {
-        navigation.navigate('Settings');
-    }
-    const notificationPageHandler = () => {
-    navigation.navigate('Notification');
+    const externalTransferHandler = () => {
+        navigation.navigate('External Transfer');
     }
 
 
@@ -43,6 +48,36 @@ function Wallet({ navigation }) {
         <>
             <SafeAreaView style={styles.appContainer}>
                 
+                
+                <Modal
+                    transparent={true}
+                    visible={showBankTransferDetails}
+                    animationType='slide'
+                    onRequestClose={() => { setBankTransferDetails(false) }}
+                    hardwareAccelerated={true}
+                >
+                    <View style={styles.centered_view}>
+                        <View style={styles.warning_modal}>
+                            <View style={styles.warning_header}>
+                                <Image source={require('../assets/images/icons/Alert.png')} resizeMode='stretch' title="Alert" style={styles.iconImage} />
+                                <Text style={styles.bigText}> Bank Transfer Details</Text>
+                            </View>
+                            <View style={styles.warning_body}>
+                                <Text style={{color: '#000', fontSize: 12, textAlign: 'left', padding: '1%'}}>Bank Name: Access Bank</Text>
+                                <Text style={{color: '#000', fontSize: 12, textAlign: 'left', padding: '1%'}}>Account Name: Fondo Expreso</Text>
+                                <Text style={{color: '#000', fontSize: 12, textAlign: 'left', padding: '1%'}}>Account Number: 0031738415</Text>
+                                <Text style={{color: '#ff0000', fontSize: 10, textAlign: 'left', padding: '1%', paddingTop: '10%'}}>Remember To Use Your Member ID As Transfer Memo For Instant Reflection!</Text>
+                            </View>
+                        
+                            <Pressable onPress={() => {setBankTransferDetails(false)}}>
+                                <View style={styles.warning_footer}>
+                                    <Text style={{ color: '#000', fontSize: 18, }}>Ok</Text>
+                                </View>
+                            </Pressable>
+                        </View>
+                    </View>
+                </Modal>
+
                 <ScrollView style={styles.appContainer}>
 
                     <View style={{marginTop: '5%', }}>
@@ -51,7 +86,7 @@ function Wallet({ navigation }) {
 
                     <View>
                         <View style={styles.optionBox}>
-                            <Pressable onPress={homePageHandler}>
+                            <Pressable onPress={cardTransferHandler}>
                                 <View style={{flexDirection: 'row', }}>
                                     <Image source={require('../assets/images/icons/e-pin.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
                                     <Text style={{color: '#2c3691', fontSize: 14, fontWeight: 'bold'}}>Cards | USSD Code</Text>
@@ -60,7 +95,7 @@ function Wallet({ navigation }) {
                             </Pressable>
                         </View>
                         <View style={styles.optionBox}>
-                            <Pressable onPress={homePageHandler}>
+                            <Pressable onPress={bankTransferHandler}>
                                 <View style={{flexDirection: 'row', }}>
                                     <Image source={require('../assets/images/icons/deposit.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
                                     <Text style={{color: '#2c3691', fontSize: 14, fontWeight: 'bold'}}>Bank Transfer | Deposit</Text>
@@ -69,7 +104,7 @@ function Wallet({ navigation }) {
                             </Pressable>
                         </View>
                         <View style={styles.optionBox}>
-                            <Pressable onPress={homePageHandler}>
+                            <Pressable onPress={cardTransferHandler}>
                                 <View style={{flexDirection: 'row', }}>
                                     <Image source={require('../assets/images/icons/profile.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
                                     <Text style={{color: '#2c3691', fontSize: 14, fontWeight: 'bold'}}>Virtual Account</Text>
@@ -86,7 +121,7 @@ function Wallet({ navigation }) {
                     
                     <View style={{flexDirection: 'column',}}>
                         <View style={styles.optionBox}>
-                            <Pressable onPress={homePageHandler}>
+                            <Pressable onPress={internalTransferHandler}>
                                 <View style={{flexDirection: 'row', }}>
                                     <Image source={require('../assets/images/icons/e-pin.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
                                     <Text style={{color: '#2c3691', fontSize: 14, fontWeight: 'bold'}}>Internal Transfer</Text>
@@ -95,7 +130,7 @@ function Wallet({ navigation }) {
                             </Pressable>
                         </View>
                         <View style={styles.optionBox}>
-                            <Pressable onPress={homePageHandler}>
+                            <Pressable onPress={externalTransferHandler}>
                                 <View style={{flexDirection: 'row', }}>
                                     <Image source={require('../assets/images/icons/deposit.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
                                     <Text style={{color: '#2c3691', fontSize: 14, fontWeight: 'bold'}}>External Transfer</Text>

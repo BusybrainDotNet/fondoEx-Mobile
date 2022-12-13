@@ -48,8 +48,14 @@ function Home({ navigation }) {
     const homePageHandler = () => {
         navigation.navigate('MemberHome');
     }
-    const depositPageHandler = () => {
-        navigation.navigate('Deposit');
+    const cardTransferHandler = () => {
+        navigation.navigate('Make Deposit');
+    }
+    const internalTransferHandler = () => {
+        navigation.navigate('Internal Transfer');
+    }
+    const externalTransferHandler = () => {
+        navigation.navigate('External Transfer');
     }
     const profilePageHandler = () => {
         navigation.navigate('Profile');
@@ -96,7 +102,7 @@ function Home({ navigation }) {
 
                 <View style={{flexDirection: 'row'}}>
 
-                    <Pressable onPress={depositPageHandler}>
+                    <Pressable onPress={cardTransferHandler}>
                         <Text style={styles.addDeposit}>+</Text>
                     </Pressable>
 
@@ -106,7 +112,7 @@ function Home({ navigation }) {
                         <View style={styles.balanceBox}>
                             <Text style={{padding: 10, fontSize: 22, fontWeight: 'bold', color: '#fff', }}> {bal} </Text>
 
-                            <Pressable onPress={depositPageHandler}>
+                            <Pressable onPress={cardTransferHandler}>
                                 <Text style={{marginRight: 50, marginLeft: 10, padding: 15, fontSize: 14, fontWeight: 'bold', color: '#fff', }}>+ Make Deposit</Text>
                             </Pressable>
                         </View>
@@ -212,21 +218,21 @@ function Home({ navigation }) {
                     <View style={styles.favBox}>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={profilePageHandler} style={styles.boxLink}>
+                            <Pressable onPress={cardTransferHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/deposit.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText}>Make Deposit </Text>
                             </Pressable>
                         </View>
 
                             <View style={styles.serviceBox}>
-                                <Pressable onPress={profilePageHandler} style={styles.boxLink}>
+                                <Pressable onPress={internalTransferHandler} style={styles.boxLink}>
                                     <Image source={require('../assets/images/icons/internal.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                     <Text style={styles.boxText}>Internal Transfer </Text>
                                 </Pressable>
                             </View>
 
                             <View style={styles.serviceBox}>
-                                <Pressable onPress={depositPageHandler} style={styles.boxLink}>
+                                <Pressable onPress={externalTransferHandler} style={styles.boxLink}>
                                     <Image source={require('../assets/images/icons/external.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                     <Text style={styles.boxText}>External Transfer</Text>
                                 </Pressable>
