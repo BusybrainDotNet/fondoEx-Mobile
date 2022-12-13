@@ -252,7 +252,7 @@ function Home({ navigation }) {
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={depositPageHandler} style={styles.boxLink}>
+                            <Pressable onPress={homePageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/kyc.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText}>Get Verified</Text>
                             </Pressable>
