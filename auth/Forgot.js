@@ -48,9 +48,9 @@ function Forgot({ navigation }) {
 
     return (
         <SafeAreaView style={styles.appContainer}>
-            <ImageBackground style={styles.appContainer} source={require('../assets/images/decor.jpg')}>
+            {/*<ImageBackground style={styles.appContainer} source={require('../assets/images/decor.jpg')}>
 
-            {/*ALERT FOR USERS BEGIN */}
+            ALERT FOR USERS BEGIN */}
             <Modal
                 transparent={true}
                 visible={showWarning}
@@ -80,27 +80,30 @@ function Forgot({ navigation }) {
             {/*ALERT FOR USERS ENDS */}
 
 
-            <Header />
+            {/* <Header /> */}
             <ScrollView>
-                <View>
+                 
                     <View style={styles.formContainer}>
+                        
+                        <Image source={require('../assets/images/logo.png')} title="Profile Image" style={styles.faviconForm} />
+                
                         <Text style={styles.text}>Reset Password</Text>
 
                         <Text style={styles.label}>Email ID</Text>
                             <TextInput onChangeText={(value) => { setEmail(value) }} style={styles.textInput} keyboardType='email-address' placeholder="fondoex@member.com" />
 
-                        <Pressable onPress={forgotFormHandler} style={({ pressed }) => ({ backgroundColor: pressed ? '#2c3691' : '#1a84bc', marginTop: 30, padding: 15, borderRadius: 5, })}>
+                        <Pressable onPress={forgotFormHandler} style={({ pressed }) => ({ backgroundColor: pressed ? '#2c3691' : '#1a84bc', marginTop: 30, padding: 10, borderRadius: 5, })}>
                             <Text style={{ color: '#fff', textAlign: 'center' }}>Continue</Text>
                         </Pressable>
 
                         <Pressable onPress={registerHandler} style={styles.link}>
-                            <Text style={{ color: '#1a84bc', textAlign: 'center', marginTop: 2 }}>Not Yet A member? Register</Text>
+                            <Text style={{ color: '#1a84bc', textAlign: 'center', marginTop: 2 }}>Not yet a member? Register</Text>
                         </Pressable>
 
                     </View>
-                </View>
+                
                 </ScrollView>
-            </ImageBackground>
+            {/* </ImageBackground> */}
         </SafeAreaView>
     );
 }

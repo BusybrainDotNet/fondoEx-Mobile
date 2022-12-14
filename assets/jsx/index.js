@@ -26,30 +26,36 @@ const styles = StyleSheet.create({
 
     formContainer: {
         flex: 1,
-        marginTop: '5%',
+        marginTop: '35%',
         paddingTop: '5%',
-        padding: '5%',
-        margin: '8%',
-        borderWidth: 1,
-        borderColor: '#1a84bc',
-        borderRadius: 10,
-        backgroundColor: '#000',
-        shadowColor: '#fff',
-        borderTopEndRadius: 50,
-        borderTopStartRadius: 10,
-        borderBottomEndRadius: 10,
-        borderBottomStartRadius: 50,
+        paddingRight: '10%',
+        paddingLeft: '10%',
+        paddingBottom: '10%',
+        margin: '5%',
+        borderWidth: 0.5,
+        borderColor: '#2c3691',
+        borderTopEndRadius: 20,
+        borderTopStartRadius: 8,
+        borderBottomEndRadius: 8,
+        borderBottomStartRadius: 20,
+    },
+
+    faviconForm: {
+        width: '50%', 
+        height: '15%', 
+        marginLeft: '22%',
+        resizeMode: 'contain', 
     },
 
     text: {
-        color: '#fff',
-        fontSize: 20,
-        padding: 20,
+        color: '#2c3691',
+        fontSize: 16,
+        padding: 10,
         textAlign: 'center'
     },
 
     label: {
-        color: '#fff',
+        color: '#2c3691',
         fontSize: 12,
         marginTop: 20,
         fontFamily: 'open sans'
@@ -60,9 +66,9 @@ const styles = StyleSheet.create({
         fontSize: 16,
         padding: 5,
         marginTop: 5,
-        borderWidth: 2,
-        borderRadius: 10,
-        borderColor: '#1a84bc',
+        borderWidth: 0.4,
+        borderRadius: 5,
+        borderColor: '#2c3691',
         backgroundColor: '#fff',
 
     },
@@ -144,7 +150,7 @@ const styles = StyleSheet.create({
     link: {
         color: '#fff',
         fontSize: 14,
-        padding: 20,
+        padding: '10%',
         textAlign: 'left'
     },
 
@@ -408,7 +414,7 @@ const styles = StyleSheet.create({
         padding: 3,
         marginTop: 5,
         borderWidth: 0.4,
-        borderRadius: 10,
+        borderRadius: 4,
         borderColor: '#595959',
         backgroundColor: '#fff',
 

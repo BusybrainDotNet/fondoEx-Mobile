@@ -33,7 +33,7 @@ function Home({ navigation }) {
                         <Text style={{ color: '#fff' }}>LET'S GET YOU STARTED</Text>
                     </Pressable>
                     <Pressable onPress={loginHandler} style={styles.link}>
-                        <Text style={styles.btnText}>Already A Member? Login</Text>
+                        <Text style={styles.btnText}>Already a member? Login</Text>
                     </Pressable>
                 </View>
             </ScrollView>

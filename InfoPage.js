@@ -18,9 +18,9 @@ function InfoPage({ navigation }) {
 
     return (
         <SafeAreaView style={styles.appContainer}>
-            <ImageBackground style={styles.appContainer} source={require('./assets/images/decor.jpg')}>
+            {/* <ImageBackground style={styles.appContainer} source={require('./assets/images/decor.jpg')}> */}
             <ScrollView>
-                <Text style={styles.text}>Information Portal! </Text>
+            <Text style={{fontSize: 20, textAlign: 'center', margin: '5%', marginTop: '20%', color: '#2c3691'}}>Information Portal! </Text>
 
                 <View style={styles.imageContainer}>
 
@@ -44,7 +44,7 @@ function InfoPage({ navigation }) {
 
                 </View>
             </ScrollView>
-        </ImageBackground>
+        {/* </ImageBackground> */}
         </SafeAreaView>
     );
 }
