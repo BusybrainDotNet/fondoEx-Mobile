@@ -92,7 +92,7 @@ function Home({ navigation }) {
 
             <View style={styles.header}>
                 <Image source={require('../assets/images/icons/morning.png')} resizeMode='contain' title="Notify" style={{radius: '50%', maxWidth: 60, maxHeight: 25,}} />
-                <Text style={{color: '#595959', fontSize: 14, alignContent: 'center', justifyContent: 'center', }}>Good Morning, {username}</Text>
+                <Text style={{color: '#595959', fontSize: 14, alignContent: 'center', justifyContent: 'center', }}>Welcome Back, {username}</Text>
                 <Pressable onPress={notificationPageHandler}>
                     <Image source={require('../assets/images/icons/notification.png')} resizeMode='contain' title="Notify" style={{radius: '50%', maxWidth: 30, maxHeight: 20, marginLeft: 60, }} />
                 </Pressable>

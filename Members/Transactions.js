@@ -21,6 +21,22 @@ function Transactions({ navigation }) {
         <>
             <SafeAreaView style={styles.appContainer}>
 
+                <View style={{flexDirection: 'row'}}>
+
+                    <ImageBackground style={{maxHeight: '100%', width: '90%', borderRadius: 10, margin: 10, }} source={require('../assets/images/cta-bg.jpg')}>
+                        <Text style={{marginLeft: 5, padding: 10, fontSize: 16, color: '#fff', fontWeight: 'bold', }}>Wallet Balance </Text>
+
+                        <View style={styles.balanceBox}>
+                            <Text style={{padding: 10, fontSize: 22, fontWeight: 'bold', color: '#fff', }}> {bal} </Text>
+
+                            <Pressable onPress={cardTransferHandler}>
+                                <Text style={{marginRight: 50, marginLeft: 10, padding: 15, fontSize: 14, fontWeight: 'bold', color: '#fff', }}>Account Status: Regular</Text>
+                            </Pressable>
+                        </View>
+                    </ImageBackground>
+
+                </View>
+
                 <ScrollView style={styles.appContainer}>
 
                     <View style={{paddingRight: '5%', paddingLeft: '5%', paddingTop: '10%'}}>

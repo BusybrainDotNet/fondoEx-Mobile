@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, View, Text, StyleSheet, TextInput, Pressable} from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, ImageBackground, TextInput, Pressable} from 'react-native';
 import styles from '../assets/jsx/index';
 
 
@@ -21,7 +21,21 @@ function InternalTransfer({ navigation }) {
     return (
         <>
             <SafeAreaView style={styles.appContainer}>
-            
+
+                <View style={{flexDirection: 'row'}}>
+
+                    <ImageBackground style={{maxHeight: '100%', width: '100%', borderRadius: 10, margin: 10, }} source={require('../assets/images/cta-bg.jpg')}>
+                        <Text style={{marginLeft: 5, padding: 10, fontSize: 16, color: '#fff', fontWeight: 'bold', }}>Wallet Balance </Text>
+
+                        <View style={styles.balanceBox}>
+                            <Text style={{padding: 10, fontSize: 22, fontWeight: 'bold', color: '#fff', }}> {bal} </Text>
+
+                            <Text style={{marginRight: 50, marginLeft: 10, padding: 15, fontSize: 14, fontWeight: 'bold', color: '#fff', }}>Account Status: Regular</Text>
+                        </View>
+                    </ImageBackground>
+
+                </View>
+
                 <View style={{marginTop: '5%', }}>
                     <Text style={styles.titleText}>Make Transfer To A FondoEx Wallet</Text>
                 </View>
@@ -31,7 +45,7 @@ function InternalTransfer({ navigation }) {
                     <View>
                         <View style={styles.innerFormContainer}>
 
-                            <Text style={styles.innerLabel}>Account Email | Member ID</Text>
+                            <Text style={styles.innerLabel}> Email ID | Member ID</Text>
                             <TextInput style={styles.innerTextInput} onChangeText={(value) => { setPassword(value) }} secureTextEntry={true} placeholder="**********" />
 
                             <Text style={styles.innerLabel}>Amount</Text>
