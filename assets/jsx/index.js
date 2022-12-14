@@ -138,8 +138,7 @@ const styles = StyleSheet.create({
         padding: 15,
         width: 20,
         height: 15,
-        backgroundColor: '#fff',
-        margin: 2,
+        marginLeft: 15,
     },
 
     link: {

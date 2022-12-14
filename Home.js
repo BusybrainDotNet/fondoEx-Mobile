@@ -19,13 +19,12 @@ function Home({ navigation }) {
     }
     return (
         <SafeAreaView style={styles.appContainer}>
-            <ImageBackground style={styles.appContainer} source={require('./assets/images/decor.jpg')}>
             <ScrollView>
-                <Text style={styles.text}>Your Number One Utility Payment Platform In Africa! </Text>
+                <Text style={{fontSize: 18, textAlign: 'center', margin: '5%', marginTop: '20%', color: '#595959'}}>Your Number One Utility Payment Platform In Africa! </Text>
 
-                    <Pressable onPress={infoHandler} style={{flex: 1, alignContent: 'flex-end', justifyContent: 'flex-end',} }>
-                        <Image style={styles.iconImage} source={require('./assets/images/icons/about.png')}></Image>
-                    </Pressable>
+                <Pressable onPress={infoHandler} style={{flex: 1, alignContent: 'flex-end', justifyContent: 'flex-end',} }>
+                    <Image style={styles.iconImage} source={require('./assets/images/icons/about.png')}></Image>
+                </Pressable>
 
                 <View style={styles.imageContainer}>
                     <Image source={require('./assets/images/logo.png')} title="Splash Image" style={styles.image} />
@@ -37,8 +36,7 @@ function Home({ navigation }) {
                         <Text style={styles.btnText}>Already A Member? Login</Text>
                     </Pressable>
                 </View>
-                </ScrollView>
-            </ImageBackground>
+            </ScrollView>
         </SafeAreaView>
     );
 }
