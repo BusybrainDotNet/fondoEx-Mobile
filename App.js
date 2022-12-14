@@ -11,13 +11,11 @@ import Profile from './Members/Profile';
 import EditProfile from './Members/EditProfile';
 import Wallet from './Members/Wallet';
 import CardTransfer from './Members/CardTransfer';
-// import BankTransfer from './Members/BankTransfer';
-// import VirtualTransfer from './Members/VirtualTransfer';
 import InternalTransfer from './Members/InternalTransfer';
 import ExternalTransfer from './Members/ExternalTransfer';
 import Settings from './Members/Settings';
+import Transactions from './Members/Transactions';
 import Referral from './Members/Referral';
-import Deposit from './Members/Deposit';
 import Notification from './Members/Notification';
 import UpdatePassword from './Members/UpdatePassword';
 import UpdatePin from './Members/UpdatePin';
@@ -47,13 +45,11 @@ const App = () => {
                     <Stack.Screen name="Update Pin" component={UpdatePin} />
                     <Stack.Screen name="Wallet" component={Wallet} />
                     <Stack.Screen name="Make Deposit" component={CardTransfer} />
-                    {/* <Stack.Screen name="Bank Transfer" component={BankTransfer} />
-                    <Stack.Screen name="Virtual Transfer" component={VirtualTransfer} /> */}
                     <Stack.Screen name="Internal Transfer" component={InternalTransfer} />
                     <Stack.Screen name="External Transfer" component={ExternalTransfer} />
                     <Stack.Screen name="Settings" component={Settings} />
-                    <Stack.Screen name="Referral" component={Referral} />
-                    <Stack.Screen name="Deposit" component={Deposit} />
+                    <Stack.Screen name="Transaction History" component={Transactions} />
+                    <Stack.Screen name="Link & Referrals" component={Referral} />
                     <Stack.Screen name="Notification" component={Notification} />
                 </Stack.Navigator>
 

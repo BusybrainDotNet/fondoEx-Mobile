@@ -11,18 +11,6 @@ function Referral({ navigation }) {
     const homePageHandler = () => {
         navigation.navigate('MemberHome');
     }
-    const depositPageHandler = () => {
-        navigation.navigate('Deposit');
-    }
-    const profilePageHandler = () => {
-        navigation.navigate('Profile');
-    }
-    const settingsPageHandler = () => {
-        navigation.navigate('Settings');
-    }
-    const notificationPageHandler = () => {
-    navigation.navigate('Notification');
-    }
 
 
     return (

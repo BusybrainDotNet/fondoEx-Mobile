@@ -12,10 +12,7 @@ function Profile({ navigation }) {
     const [username, setUsername] = useState('Tom Kim');
     const [bal, setBal] = useState('#25,000');
 
-
-    const depositPageHandler = () => {
-        navigation.navigate('Deposit');
-    }
+    
     const editProfileHandler = () => {
         navigation.navigate('Edit Profile');
     }

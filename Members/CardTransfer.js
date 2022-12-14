@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, View, Text, TextInput, Pressable, TouchableOpacity, Image } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, TextInput, Pressable, Modal, Image } from 'react-native';
 import styles from '../assets/jsx/index';
 
 

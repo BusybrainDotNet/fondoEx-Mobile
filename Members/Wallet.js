@@ -63,10 +63,11 @@ function Wallet({ navigation }) {
                                 <Text style={styles.bigText}> Bank Transfer Details</Text>
                             </View>
                             <View style={styles.warning_body}>
-                                <Text style={{color: '#000', fontSize: 12, textAlign: 'left', padding: '1%'}}>Bank Name: Access Bank</Text>
-                                <Text style={{color: '#000', fontSize: 12, textAlign: 'left', padding: '1%'}}>Account Name: Fondo Expreso</Text>
-                                <Text style={{color: '#000', fontSize: 12, textAlign: 'left', padding: '1%'}}>Account Number: 0031738415</Text>
-                                <Text style={{color: '#ff0000', fontSize: 10, textAlign: 'left', padding: '1%', paddingTop: '10%'}}>Remember To Use Your Member ID As Transfer Memo For Instant Reflection!</Text>
+                            <Text style={{color: '#2c3691', fontSize: 12, textAlign: 'left', padding: '3%', paddingBottom: '15%'}}>Make a Deposit To The Account Details Below To Credit Your Wallet</Text>
+                                <Text style={{color: '#000', fontSize: 14, textAlign: 'left', padding: '1%'}}>Bank Name: Access Bank NG</Text>
+                                <Text style={{color: '#000', fontSize: 14, textAlign: 'left', padding: '1%'}}>Account Name: Fondo Expreso</Text>
+                                <Text style={{color: '#000', fontSize: 14, textAlign: 'left', padding: '1%'}}>Account Number: 0031738415</Text>
+                                <Text style={{color: '#ff0000', fontSize: 10, textAlign: 'left', padding: '1%', paddingTop: '15%'}}>Remember To Use Your Member ID As Transfer Memo For Instant Reflection!</Text>
                             </View>
                         
                             <Pressable onPress={() => {setBankTransferDetails(false)}}>

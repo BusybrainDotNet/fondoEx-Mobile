@@ -7,7 +7,7 @@ import styles from '../assets/jsx/index';
 /*
 * Member Auth Home Screen Or Home Page For Members
 */
-function Notification({ navigation }) {
+function Transactions({ navigation }) {
 
     /*
     * Define User Details
@@ -47,4 +47,4 @@ function Notification({ navigation }) {
 /*
 * Export Of The Main App To Screens
 */
-export default Notification;
+export default Transactions;

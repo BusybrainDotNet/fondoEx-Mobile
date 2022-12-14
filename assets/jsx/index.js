@@ -395,7 +395,7 @@ const styles = StyleSheet.create({
     },
 
     innerLabel: {
-        color: '#595959',
+        color: '#2c3691',
         fontSize: 12,
         marginTop: 20,
         fontFamily: 'open sans'
@@ -408,7 +408,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         padding: 3,
         marginTop: 5,
-        borderWidth: 1,
+        borderWidth: 0.4,
         borderRadius: 10,
         borderColor: '#595959',
         backgroundColor: '#fff',

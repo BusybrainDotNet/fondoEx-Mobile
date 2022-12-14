@@ -45,9 +45,6 @@ function Home({ navigation }) {
 /*
 * Define Route Handlers
 */
-    const homePageHandler = () => {
-        navigation.navigate('MemberHome');
-    }
     const cardTransferHandler = () => {
         navigation.navigate('Make Deposit');
     }
@@ -57,32 +54,35 @@ function Home({ navigation }) {
     const externalTransferHandler = () => {
         navigation.navigate('External Transfer');
     }
-    const profilePageHandler = () => {
-        navigation.navigate('Profile');
-    }
     const notificationPageHandler = () => {
         navigation.navigate('Notification');
     }
     const historyPageHandler = () => {
-        navigation.navigate('History');
+        navigation.navigate('Transaction History');
     }
     const topupPageHandler = () => {
-        navigation.navigate('MobileTopUp');
+        navigation.navigate('Mobile TopUp');
     }
     const dataPageHandler = () => {
-        navigation.navigate('MobileData');
+        navigation.navigate('Mobile Data');
     }
     const electricityPageHandler = () => {
-        navigation.navigate('Electricity');
+        navigation.navigate('Electricity Billpay');
     }
     const televisionPageHandler = () => {
-        navigation.navigate('Television');
+        navigation.navigate('Television Billpay');
     }
     const educationPageHandler = () => {
-        navigation.navigate('Education');
+        navigation.navigate('Educational Cards');
     }
     const referralPageHandler = () => {
-        navigation.navigate('Referral');
+        navigation.navigate('Link & Referrals');
+    }
+    const loanPageHandler = () => {
+        navigation.navigate('Quick Cash');
+    }
+    const verificationPageHandler = () => {
+        navigation.navigate('Verification');
     }
 
 
@@ -245,21 +245,21 @@ function Home({ navigation }) {
                     <View style={styles.favBox}>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={profilePageHandler} style={styles.boxLink}>
+                            <Pressable onPress={loanPageHandler} style={styles.boxLink}>
                             <Image source={require('../assets/images/icons/market.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText}>Quick Cash</Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={homePageHandler} style={styles.boxLink}>
+                            <Pressable onPress={verificationPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/kyc.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText}>Get Verified</Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.serviceBox}>
-                            <Pressable onPress={homePageHandler} style={styles.boxLink}>
+                            <Pressable onPress={referralPageHandler} style={styles.boxLink}>
                                 <Image source={require('../assets/images/icons/rewards.png')} resizeMode='contain' title='Icon' style={styles.boxImage }></Image>
                                 <Text style={styles.boxText}>Rewards </Text>
                             </Pressable>
