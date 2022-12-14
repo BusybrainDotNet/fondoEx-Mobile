@@ -14,6 +14,7 @@ import CardTransfer from './Members/CardTransfer';
 import InternalTransfer from './Members/InternalTransfer';
 import ExternalTransfer from './Members/ExternalTransfer';
 import Settings from './Members/Settings';
+import Verification from './Members/Verification';
 import Transactions from './Members/Transactions';
 import Referral from './Members/Referral';
 import Notification from './Members/Notification';
@@ -48,6 +49,7 @@ const App = () => {
                     <Stack.Screen name="Internal Transfer" component={InternalTransfer} />
                     <Stack.Screen name="External Transfer" component={ExternalTransfer} />
                     <Stack.Screen name="Settings" component={Settings} />
+                    <Stack.Screen name="Verification" component={Verification} />
                     <Stack.Screen name="Transaction History" component={Transactions} />
                     <Stack.Screen name="Link & Referrals" component={Referral} />
                     <Stack.Screen name="Notification" component={Notification} />

@@ -17,6 +17,9 @@ function Settings({ navigation }) {
     const updatePinPageHandler = () => {
         navigation.navigate('Update Pin');
     }
+    const verificationPageHandler = () => {
+        navigation.navigate('Verification');
+    }
 
 
     return (
@@ -50,10 +53,19 @@ function Settings({ navigation }) {
                     <View style={styles.optionBox}>
                         <Pressable onPress={updatePasswordPageHandler}>
                             <View style={{flexDirection: 'row', }}>
-                                <Image source={require('../assets/images/icons/profile.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
+                                <Image source={require('../assets/images/icons/key.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
                                 <Text style={{color: '#2c3691', fontSize: 14, fontWeight: 'bold'}}>Update Password</Text>
                             </View>
                             <Text style={{color: '#595959', fontSize: 10, marginLeft: '20%', paddingTop: 3,}}>Change Account Password</Text>
+                        </Pressable>
+                    </View>
+                    <View style={styles.optionBox}>
+                        <Pressable onPress={verificationPageHandler}>
+                            <View style={{flexDirection: 'row', }}>
+                                <Image source={require('../assets/images/icons/kyc.png')} resizeMode='contain' title='Icon' style={{width: 20, height: 20, marginLeft: 5, marginRight: 10,}}></Image>
+                                <Text style={{color: '#2c3691', fontSize: 14, fontWeight: 'bold'}}>Get Verified</Text>
+                            </View>
+                            <Text style={{color: '#595959', fontSize: 10, marginLeft: '20%', paddingTop: 3,}}>Upload Valid ID To Get Verified</Text>
                         </Pressable>
                     </View>
                 </View>
